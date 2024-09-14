@@ -1,0 +1,12 @@
+{
+"css.lint.unknownAtRules": "ignore",
+"scss.lint.unknownAtRules": "ignore",
+"less.lint.unknownAtRules": "ignore",
+"css.validate": false,
+"scss.validate": false,
+"less.validate": false,
+"tailwindCSS.emmetCompletions": true,
+"editor.quickSuggestions": {
+  "strings": true
+  }
+}
