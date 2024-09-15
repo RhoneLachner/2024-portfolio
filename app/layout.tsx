@@ -1,20 +1,15 @@
-// app/layout.tsx
-import './globals.css';
-import React from 'react';
+import { ReactNode } from 'react';
+import './globals.css'; 
+import styles from './layout.module.css'; 
+import Header from './components/Header';
 
-export const metadata = {
-  title: 'My Portfolio',
-  description: 'Welcome to my portfolio website',
-};
-
-interface RootLayoutProps {
-  children: React.ReactNode;
-}
-
-export default function RootLayout({ children }: RootLayoutProps) {
+export default function Layout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={styles.body}>
+        <Header /> 
+        <main className={styles.main}>{children}</main>
+      </body>
     </html>
   );
 }

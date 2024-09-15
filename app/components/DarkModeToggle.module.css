@@ -1,0 +1,14 @@
+.toggleButton {
+    @apply p-2 bg-transparent text-lg; 
+    outline: none; 
+    border: none; 
+    cursor: pointer; 
+}
+
+.toggleButton:focus {
+    outline: none; 
+}
+
+.toggleButton:hover {
+    transform: scale(1.1); 
+}

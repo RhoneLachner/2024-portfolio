@@ -1,0 +1,31 @@
+.homePage {
+    position: relative;
+    height: 100%;
+    z-index: -1;
+  }
+  
+  .copyContainer {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    color: white; 
+    font-size: 2.5rem; 
+    text-align: center;
+    margin-top: 40vh;
+
+    @media (min-width: 768px) {
+        justify-content: flex-start; 
+        text-align: left;            
+        padding-left: 2rem;          
+        font-size: 2.5rem;           
+    }
+  }
+  
+  .copyLine1, .copyLine2, .copyLine3, .copyLine4 {
+    margin-bottom: 1rem; 
+  }
+  
+  
