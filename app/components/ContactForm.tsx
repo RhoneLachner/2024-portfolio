@@ -1,3 +1,5 @@
+// TO-DO - email contact form still needs configuration to send emails
+
 import React from 'react';
 import styles from './ContactForm.module.css';
 
