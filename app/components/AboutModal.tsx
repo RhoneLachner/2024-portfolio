@@ -15,10 +15,40 @@ const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
   return (
     <div className={styles.modalOverlay}>
       <div className={styles.modalContent}>
-      <button onClick={onClose} className={styles.closeButton}>
-          <Image src="/images/icons/close-icon-white.png" alt="Close Icon" width={24} height={24} />
-        </button>        <Image src="/images/bio-image.jpg" alt="Bio Image" width={150} height={150} />
-        <p>This is a short bio description.</p>
+        <button onClick={onClose} className={styles.closeButton}>
+          <Image
+            src="/images/icons/close-icon-white.png"
+            alt="Close Icon"
+            width={24}
+            height={24}
+          />
+        </button>
+        <Image
+          className={styles.bioImage}
+          src="/images/bio-image.jpg"
+          alt="Bio Image"
+          width={150}
+          height={150}
+        />
+        <div className={styles.bioCopy}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+          vitae magna ullamcorper, scelerisque libero sed, vehicula turpis.
+          Curabitur tincidunt mauris et sem bibendum, vitae bibendum felis
+          vehicula. Cras tincidunt, eros eget dapibus efficitur, nulla eros
+          aliquet mi, vitae venenatis nulla orci nec erat. Praesent sed lacus
+          risus. Donec tempor interdum arcu, id posuere nulla lacinia ac. Nam
+          fermentum tristique lectus, id ultricies nunc tristique id. Nulla in
+          fringilla eros..
+          <br />
+          <br />
+          Vivamus malesuada felis non feugiat ullamcorper. Phasellus bibendum
+          est ut dui aliquet, vitae fermentum risus pulvinar. Proin euismod
+          augue quam, ut vulputate nulla convallis a. Nulla non pharetra nulla.
+          Mauris accumsan sem at turpis tincidunt, ac hendrerit urna pharetra.
+          Nulla venenatis aliquet eros, vel eleifend eros facilisis sit amet.
+          Vestibulum sed eros nunc. Quisque vulputate, urna ut dignissim luctus,
+          mi dui vehicula ipsum, at pretium enim ligula nec dolor.
+        </div>
       </div>
     </div>
   );

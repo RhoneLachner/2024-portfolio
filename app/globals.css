@@ -1,3 +1,28 @@
+@font-face {
+  font-family: 'Hyperbola';
+  src: url('/fonts/hyperbola.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-Regular.ttf') format('truetype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-Italic.ttf') format('truetype');
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Comfortaa';
+  src: url('/fonts/Comfortaa-Regular.ttf') format('truetype');
+  font-style: normal;
+}
+
 /* Base styles */
 html {
   scroll-behavior: smooth;
@@ -5,7 +30,7 @@ html {
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif; /* default font */
   background-color: #1a1a1a;
   color: #ffffff;
   max-height: 100%;
