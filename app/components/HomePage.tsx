@@ -16,14 +16,14 @@ const HomePage: React.FC = () => {
     <div className={styles.homePage}>
       <div className={styles.particleBackgroundContainer}>
         <ParticleBackground ref={particleRef} />
-        <div className={styles.particleResetButtonContainer}>
+        {/* <div className={styles.particleResetButtonContainer}>
           <button
             className={styles.particleResetButton}
             onClick={handleResetClick}
           >
             Reset Particles
           </button>
-        </div>
+        </div> */}
       </div>
       <div className={styles.copyContainer}>
         <div className={styles.internalCopyContainer}>

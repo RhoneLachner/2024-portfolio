@@ -8,10 +8,26 @@ import React, {
 } from 'react';
 import styles from './ParticleBackground.module.css';
 
-const THICKNESS = Math.pow(80, 2); //particles make cool patterns when numbers are changed slightly
-const SPACING = 8;
-const COLOR = 200; //130 is nice over dark background
-const DRAG = 0.9; //Does a cool thing at 1, particles don't auto-reset
+const getThickness = () => {
+  return window.innerWidth < 480
+    ? Math.pow(70, 2)
+    : window.innerWidth < 768
+    ? Math.pow(75, 2)
+    : Math.pow(80, 2);
+};
+
+const getSpacing = () => {
+  return window.innerWidth < 480
+    ? 7.4
+    : window.innerWidth < 768
+    ? 7.8
+    : 8;
+};
+
+const THICKNESS = getThickness(); //particles make cool patterns when numbers are changed slightly
+const SPACING = getSpacing();
+const COLOR = 110;
+const DRAG = 1;
 const EASE = 0.15;
 
 //Defaults: thickness=Math.pow(80, 2), spacing=8, color=200, drag=0.8, ease-0.15
