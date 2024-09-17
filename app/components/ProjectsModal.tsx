@@ -70,10 +70,10 @@ const ProjectsModal: React.FC<ProjectsModalProps> = ({ isOpen, onClose }) => {
                 beHuman VS Code Extension
               </div>
               <div className={styles.carouselDescription}>
-                This app was created using with Node.js, JavaScript, HTML, CSS,
-                PostgreSQL, Heroku, Netlify, and Photoshop. In 7 days my team
-                and I created a VS Code extension that alerts users to take a
-                break from their screens at a time increment of choice.
+                This website was created using with Node.js, JavaScript, HTML,
+                CSS, PostgreSQL, Heroku, Netlify, and Photoshop. In 7 days my
+                team and I created a VS Code extension that alerts users to take
+                a break from their screens at a time increment of choice.
               </div>
             </div>
           </div>
@@ -99,7 +99,9 @@ const ProjectsModal: React.FC<ProjectsModalProps> = ({ isOpen, onClose }) => {
           <div className={styles.carouselItemContainer}>
             <ImageCarousel images={images} />
             <div className={styles.carouselTextContainer}>
-              <div className={styles.carouselTitle}>Major Arcana Divinator App</div>
+              <div className={styles.carouselTitle}>
+                Major Arcana Divinator App
+              </div>
               <div className={styles.carouselDescription}>
                 This app was primarily written with Vanilla JavaScript, HTML,
                 and CSS with additional items created in PhotoShop and
@@ -115,8 +117,10 @@ const ProjectsModal: React.FC<ProjectsModalProps> = ({ isOpen, onClose }) => {
             <div className={styles.carouselTextContainer}>
               <div className={styles.carouselTitle}>Karaoke Roulette App</div>
               <div className={styles.carouselDescription}>
-              This React app was created using YouTube API, JavaScript, Node.js, PostgreSQL, CSS, Heroku, Netlify, Postman, and Photoshop.
-              Karaoke Roulette App uses the YouTube API, allowing users to select randomized karaoke songs to sing with friends.
+                This React app was created using YouTube API, JavaScript,
+                Node.js, PostgreSQL, CSS, Heroku, Netlify, Postman, and
+                Photoshop. Karaoke Roulette App uses the YouTube API, allowing
+                users to select randomized karaoke songs to sing with friends.
               </div>
             </div>
           </div>

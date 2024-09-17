@@ -1,9 +1,30 @@
-import styles from './HomePage.module.css'; // Import CSS module
+'use client';
+import React, { useRef } from 'react';
+import ParticleBackground from './ParticleBackground';
+import styles from './HomePage.module.css';
 
-const HomePage = () => {
+const HomePage: React.FC = () => {
+  const particleRef = useRef<{ resetParticles: () => void } | null>(null);
+
+  const handleResetClick = () => {
+    if (particleRef.current) {
+      particleRef.current.resetParticles();
+    }
+  };
+
   return (
     <div className={styles.homePage}>
-      {/* TO-DO -  <ParticleBackground /> */}
+      <div className={styles.particleBackgroundContainer}>
+        <ParticleBackground ref={particleRef} />
+        <div className={styles.particleResetButtonContainer}>
+          <button
+            className={styles.particleResetButton}
+            onClick={handleResetClick}
+          >
+            Reset Particles
+          </button>
+        </div>
+      </div>
       <div className={styles.copyContainer}>
         <div className={styles.internalCopyContainer}>
           <div className={styles.copyLine1}> </div>
