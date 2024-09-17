@@ -132,19 +132,29 @@
   margin-top: -0.3rem;
 
   @media (min-width: 768px) {
-    margin-top: -0.3rem;
+    margin-top: -0.5rem;
     font-size: 12px;
   }
 }
 
 .carouselDescription {
   font-weight: 300;
-  font-size: 12px;
-  padding-top: 0.3rem;
+  font-size: 11px;
+  padding-top: 6px;
   padding-bottom: 1rem;
+  max-width: 20rem;
+  line-height: 1.5;
+  text-align: left;
+
+  @media (min-width: 768px) {
+    font-size: 10px;
+  }
 
   @media (min-width: 1024px) {
-    font-size: 11px;
+    font-size: 10px;
     padding-bottom: 0rem;
+    max-width: auto;
+    padding-top: 4.5px;
+    line-height: 1.3;
   }
 }

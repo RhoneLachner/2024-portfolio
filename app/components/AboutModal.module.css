@@ -78,17 +78,29 @@
     height: 11rem; /* Set the height to create the oval effect */
     min-height: 11rem;
   }
+
+  @media (min-width: 1024px) {
+    width: 16rem; /* Set the desired width */
+    max-width: 16rem;
+    height: 12rem; /* Set the height to create the oval effect */
+    min-height: 12rem;
+  }
 }
 
 .bioCopy {
   padding: 0rem;
   padding-top: 3vh;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 1.75;
 
   @media (min-width: 768px) {
-    padding: 1.25rem 3.5rem;
+    padding: 2rem 3.5rem;
     font-size: 12.2px;
     line-height: 1.8;
+  }
+
+  @media (min-width: 1024px) {
+    padding-top: 1.6rem;
+  
   }
 }
