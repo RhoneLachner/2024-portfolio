@@ -6,7 +6,7 @@
 
 .copyContainer {
   position: absolute;
-  padding: 22rem 1rem 4rem 1rem;
+  padding: 24rem 1rem 4rem 1rem;
   inset: 0;
   display: flex;
   flex-direction: column;
@@ -14,6 +14,8 @@
   justify-content: center;
   color: white;
   text-align: left;
+  pointer-events: none; 
+z-index: 2;
 
   @media (min-width: 768px) {
     padding: 60vh 1rem 4rem 4vw;
@@ -42,7 +44,7 @@
 
 .copyLine2 {
   margin-left: 3.2rem;
-  font-family: 'Hyperbola', sans-serif; /* Apply the custom font */
+  font-family: 'Hyperbola', sans-serif; 
   letter-spacing: 2px;
   line-height: 2.4rem;
   font-size: 1.2rem;
@@ -120,22 +122,30 @@
 .particleResetButtonContainer {
   position: absolute;
   justify-self: flex-end;
-  left: 50vh; /* Center it */
-  z-index: 3; /* Ensure the button is on top */
+  left: 50vh; 
+  z-index: 3; 
   margin-top: 20rem;
   max-width: fit-content;
 }
 
 .particleResetButton {
+  position: fixed; 
+  bottom: 4vh; 
+  left: 50%; 
+  transform: translateX(-50%); 
   background-color: rgb(0, 0, 0);
   border-radius: 5px;
   cursor: pointer;
-  border: 2px solid #2ed788;
-  font-size: 20px;
-  color: #2ed788;
-  padding: 10px 20px;
+  border: none;
+  font-size: 12px;
+  color: #959595;
+  padding: 10px 16px;
+  z-index: 9999; 
+  letter-spacing: 1.75px;
 }
 
 .particleResetButton:hover {
-  background-color: rgb(127, 127, 127);
+  background-color: rgb(91, 91, 91);
+  color: black;
 }
+
