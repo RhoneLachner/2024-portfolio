@@ -1,0 +1,74 @@
+.carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0rem 0;
+  width: 100%;
+
+  @media (min-width: 1024px) {
+    width: 50%;
+    margin-left: 6%;
+  }
+
+  @media (min-width: 1060px) {
+    width: 50%;
+    margin-left: 8%;
+  }
+
+  @media (min-width: 1200px) {
+    width: 50%;
+    margin-left: 12%;
+  }
+
+  @media (min-width: 1400) {
+    width: 50%;
+    margin-left: 15%;
+  }
+}
+
+.imageContainer {
+  position: relative;
+  width: 16rem;
+  height: 8rem;
+  overflow: hidden;
+  max-width: 700px;
+  border-radius: 35px;
+
+  @media (min-width: 1024px) {
+    width: 16rem;
+    height: 8rem;
+  }
+}
+
+.carouselImage {
+  object-fit: cover; /* Ensures the image covers the container */
+  width: 100%;
+  height: 100%; /* Full height */
+  border-radius: 35px; /* Make sure the image itself also has border-radius */
+}
+
+.chevronLeft,
+.chevronRight {
+  position: absolute;
+  top: 50%; /* Center chevrons vertically */
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 2; /* Ensures chevrons are on top of the image */
+}
+
+.chevronLeft {
+  left: 10px; /* Adjust position inside the container */
+}
+
+.chevronRight {
+  right: 10px; /* Adjust position inside the container */
+}
+
+.chevronLeftImage,
+.chevronRightImage {
+  width: 25px;
+  height: auto;
+}
