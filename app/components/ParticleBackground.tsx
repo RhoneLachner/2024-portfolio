@@ -9,19 +9,21 @@ import React, {
 import styles from './ParticleBackground.module.css';
 
 const getThickness = () => {
-  return window.innerWidth < 480
-    ? Math.pow(70, 2)
-    : window.innerWidth < 768
-    ? Math.pow(75, 2)
-    : Math.pow(80, 2);
+  if (typeof window !== 'undefined') {
+    return window.innerWidth < 480
+      ? Math.pow(70, 2)
+      : window.innerWidth < 768
+      ? Math.pow(75, 2)
+      : Math.pow(80, 2);
+  }
+  return Math.pow(80, 2);
 };
 
 const getSpacing = () => {
-  return window.innerWidth < 480
-    ? 7.4
-    : window.innerWidth < 768
-    ? 7.8
-    : 8;
+  if (typeof window !== 'undefined') {
+  return window.innerWidth < 480 ? 7.4 : window.innerWidth < 768 ? 7.8 : 8;
+  }
+  return 8;
 };
 
 const THICKNESS = getThickness(); //particles make cool patterns when numbers are changed slightly
@@ -68,7 +70,7 @@ const ParticleBackground = forwardRef((props: ParticleBackgroundProps, ref) => {
       man = false;
     let ctx: CanvasRenderingContext2D | null = null;
     let tog = true;
-
+    
     const particle: Particle = { vx: 0, vy: 0, x: 0, y: 0, ox: 0, oy: 0 };
 
     const resizeCanvas = () => {
@@ -116,11 +118,12 @@ const ParticleBackground = forwardRef((props: ParticleBackgroundProps, ref) => {
     };
 
     const step = () => {
+      //automatically plays particle animation before cursor is detected
       if (!ctx) return;
 
       if ((tog = !tog)) {
         if (!man) {
-          const t = +new Date() * 0.001;
+          const t = +new Date() * 0.001; //speed
           mx = w * 0.5 + Math.cos(t * 2.1) * Math.cos(t * 0.9) * w * 0.45;
           my =
             h * 0.5 +
