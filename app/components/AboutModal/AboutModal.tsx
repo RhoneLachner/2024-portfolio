@@ -12,26 +12,32 @@ interface AboutModalProps {
 const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null; // Only render if isOpen is true
 
-console.log("ABOUTMODAL ON SCREEN");
+  console.log('ABOUTMODAL ON SCREEN');
 
   return (
     <div className={styles.modalOverlay}>
       <div className={styles.modalContent}>
+        
         <button onClick={onClose} className={styles.closeButton}>
-          <Image
-            src="/images/icons/close-icon-white.png"
-            alt="Close Icon"
-            width={24}
-            height={24}
-          />
+            <Image
+              src="/images/icons/close-icon-white.png"
+              alt="Close Icon"
+              width={24}
+              height={24}
+            />
         </button>
-        <Image
-          className={styles.bioImage}
-          src="/images/bio-image.jpg"
-          alt="Bio Image"
-          width={150}
-          height={150}
-        />
+
+        <div className={styles.bioImageContainer}>
+          <Image
+            className={styles.bioImage}
+            src="/images/bio-image.jpg"
+            alt="Bio Image"
+            width={320}  
+            height={320}
+            priority 
+          />
+        </div>
+
         <div className={styles.bioCopy}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
           vitae magna ullamcorper, scelerisque libero sed, vehicula turpis.
