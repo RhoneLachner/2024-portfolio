@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { useDarkMode } from '../../hooks/useDarkMode';
-import styles from "./DarkModeToggle.module.css";
+import styles from './DarkModeToggle.module.css'; 
 
 const DarkModeToggle = () => {
   const [darkMode, toggleDarkMode] = useDarkMode(); // Use the custom hook

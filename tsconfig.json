@@ -31,11 +31,10 @@
   },
   "include": [
     "next-env.d.ts",
-    "app/**/*.{ts,tsx}",
-    "app/**/**/*.{ts,tsx}", 
-    "components/**/*",
-    "components/*/*",
-    ".next/types/**/*.ts"
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "declarations.d.ts"
   ],
   "exclude": [
     "node_modules"
