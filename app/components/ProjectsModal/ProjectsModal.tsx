@@ -9,10 +9,12 @@ interface ProjectsModalProps {
 }
 
 const images = [
-  '/images/placeholder-images/placeholder-image1',
-  '/images/placeholder-images/placeholder-image2',
-  '/images/placeholder-images/placeholder-image3',
+  '/images/placeholder-images/placeholder-image1.png',
+  '/images/placeholder-images/placeholder-image2.png',
+  '/images/placeholder-images/placeholder-image3.png',
+  '/images/placeholder-images/placeholder-image4.png',
 ];
+
 
 const ProjectsModal: React.FC<ProjectsModalProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
