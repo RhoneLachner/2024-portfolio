@@ -8,31 +8,11 @@ import React, {
 } from 'react';
 import styles from './ParticleBackground.module.css';
 
-const getThickness = () => {
-  if (typeof window !== 'undefined') {
-    return window.innerWidth < 480
-      ? Math.pow(70, 2)
-      : window.innerWidth < 768
-      ? Math.pow(75, 2)
-      : Math.pow(80, 2);
-  }
-  return Math.pow(80, 2);
-};
-
-const getSpacing = () => {
-  if (typeof window !== 'undefined') {
-  return window.innerWidth < 480 ? 7.4 : window.innerWidth < 768 ? 7.8 : 8;
-  }
-  return 8;
-};
-
-const THICKNESS = getThickness(); //particles make cool patterns when numbers are changed 
-const SPACING = getSpacing();
+const THICKNESS = 80 ** 2;
+const SPACING = 8;
 const COLOR = 125;
 const DRAG = 1;
 const EASE = 0.15;
-
-//Defaults: thickness=Math.pow(80, 2), spacing=8, color=200, drag=0.8, ease-0.15
 
 interface Particle {
   vx: number;
@@ -48,7 +28,7 @@ interface ParticleBackgroundProps {}
 const ParticleBackground = forwardRef((props: ParticleBackgroundProps, ref) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
-  const particlesRef = useRef<Particle[]>([]); // Ref for manually resetting particles via button
+  const particlesRef = useRef<Particle[]>([]); //reset particles ref
 
   useImperativeHandle(ref, () => ({
     resetParticles: () => {
@@ -62,6 +42,7 @@ const ParticleBackground = forwardRef((props: ParticleBackgroundProps, ref) => {
   }));
 
   useEffect(() => {
+    console.log('ParticleBackground rendered');
     if (typeof window === 'undefined') return;
 
     let w: number, h: number;
@@ -70,7 +51,7 @@ const ParticleBackground = forwardRef((props: ParticleBackgroundProps, ref) => {
       man = false;
     let ctx: CanvasRenderingContext2D | null = null;
     let tog = true;
-    
+
     const particle: Particle = { vx: 0, vy: 0, x: 0, y: 0, ox: 0, oy: 0 };
 
     const resizeCanvas = () => {
@@ -87,7 +68,8 @@ const ParticleBackground = forwardRef((props: ParticleBackgroundProps, ref) => {
       const COLS = Math.floor(w / SPACING);
       const NUM_PARTICLES = ROWS * COLS;
 
-      particlesRef.current = []; // Reset particle array
+      //reset particles array
+      particlesRef.current = [];
       for (let i = 0; i < NUM_PARTICLES; i++) {
         const p: Particle = { ...particle };
         p.x = p.ox = SPACING * (i % COLS);

@@ -12,6 +12,8 @@ interface AboutModalProps {
 const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null; // Only render if isOpen is true
 
+console.log("ABOUTMODAL ON SCREEN");
+
   return (
     <div className={styles.modalOverlay}>
       <div className={styles.modalContent}>

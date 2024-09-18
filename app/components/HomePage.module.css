@@ -5,9 +5,9 @@
   background-color: var(--background-color);
 }
 
-[data-theme='light'] .homePage {
+/* [data-theme='light'] .homePage {
   color: black;
-}
+} */
 .copyContainer {
   position: absolute;
   padding: 24rem 1rem 4rem 1rem;
@@ -152,4 +152,21 @@
 .particleResetButton:hover {
   background-color: rgb(91, 91, 91);
   color: black;
+}
+
+.internalCopyContainer {
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+/* Define a class to hide it */
+.hideOnSmallScreens .internalCopyContainer {
+  display: none;
+}
+
+/* Apply media query for 768px or smaller */
+@media (min-width: 769px) {
+  .hideOnSmallScreens .internalCopyContainer {
+    display: block; /* Ensure it's visible on larger screens */
+  }
 }
