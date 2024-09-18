@@ -5,9 +5,6 @@
   background-color: var(--background-color);
 }
 
-/* [data-theme='light'] .homePage {
-  color: black;
-} */
 .copyContainer {
   position: absolute;
   padding: 24rem 1rem 4rem 1rem;
@@ -147,6 +144,8 @@
   padding: 11px 16px;
   z-index: 9999;
   letter-spacing: 1.75px;
+  display: block;
+  transition: opacity 0.3s ease;
 }
 
 .particleResetButton:hover {
@@ -154,19 +153,28 @@
   color: black;
 }
 
+/* Hide reset button when modal is open */
+.particleResetButton {
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+.hideOnSmallScreens .particleResetButton {
+  display: none;
+}
+
 .internalCopyContainer {
   display: block;
   transition: opacity 0.3s ease;
 }
 
-/* Define a class to hide it */
+/* hide text container when modal is open and BP < 768px */
 .hideOnSmallScreens .internalCopyContainer {
   display: none;
 }
 
-/* Apply media query for 768px or smaller */
 @media (min-width: 769px) {
   .hideOnSmallScreens .internalCopyContainer {
-    display: block; /* Ensure it's visible on larger screens */
+    display: block;
   }
 }

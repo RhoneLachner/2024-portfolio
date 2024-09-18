@@ -22,7 +22,7 @@ const HomePage: React.FC = () => {
 
       <div className={`${styles.particleResetButtonContainer} ${openModal ? styles.hideOnSmallScreens : ''}`}>
         <button
-          className={styles.particleResetButton}
+          className={`${styles.particleResetButton} ${openModal ? styles.hideOnSmallScreens : ''}`}
           onClick={handleResetClick}
         >
           reset particles
