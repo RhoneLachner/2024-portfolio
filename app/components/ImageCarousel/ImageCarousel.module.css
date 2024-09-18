@@ -13,17 +13,15 @@
 
   @media (min-width: 1060px) {
     width: 50%;
-    margin-left: 8%;
   }
 
   @media (min-width: 1200px) {
     width: 50%;
-    margin-left: 12%;
   }
 
   @media (min-width: 1400) {
     width: 50%;
-    margin-left: 15%;
+    margin-left: 18%;
   }
 }
 
@@ -42,33 +40,40 @@
 }
 
 .carouselImage {
-  object-fit: cover; /* Ensures the image covers the container */
+  object-fit: cover;
   width: 100%;
-  height: 100%; /* Full height */
-  border-radius: 35px; /* Make sure the image itself also has border-radius */
+  height: 100%;
+  border-radius: 35px;
 }
 
 .chevronLeft,
 .chevronRight {
   position: absolute;
-  top: 50%; /* Center chevrons vertically */
+  top: 50%;
   transform: translateY(-50%);
   background: transparent;
   border: none;
   cursor: pointer;
-  z-index: 2; /* Ensures chevrons are on top of the image */
+  z-index: 2;
 }
 
 .chevronLeft {
-  left: 10px; /* Adjust position inside the container */
+  left: 5px;
 }
 
 .chevronRight {
-  right: 10px; /* Adjust position inside the container */
+  right: 5px;
 }
 
 .chevronLeftImage,
 .chevronRightImage {
-  width: 25px;
+  width: 22px;
   height: auto;
+  box-sizing: border-box;
+}
+
+.chevronLeftImage:hover,
+.chevronRightImage:hover {
+  outline: 1px solid white;
+  border-radius: 35px;
 }
