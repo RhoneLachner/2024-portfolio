@@ -39,7 +39,7 @@
     margin: 0 0.5vw;
     margin-top: 54px;
     in-top: 54px;
-    padding-top: 3rem;
+    padding-top: 2.5rem;
     padding-left: 0;
     padding-right: 0;
     height: 84%;
@@ -68,31 +68,31 @@
   justify-self: center;
   margin: 4.5vh auto 1vh auto;
   width: 15.5rem;
-  height: 11rem;
+  height: calc(15.5rem / 1.38);
   border-radius: 50%;
   overflow: hidden;
 
   @media (min-width: 425px) {
     width: 16rem;
-    height: calc(16rem / 1.4);
+    height: calc(16rem / 1.38);
   }
 
   @media (min-width: 568px) {
     width: 16.5rem;
-    height: calc(16.5rem / 1.4);
+    height: calc(16.5rem / 1.38);
   }
   @media (min-width: 768px) {
     width: 16rem;
-    height: calc(16rem / 1.4);
+    height: calc(16rem / 1.38);
   }
 
   @media (min-width: 1024px) {
     width: 16.5rem;
-    height: calc(16.5rem / 1.4);
+    height: calc(16.5rem / 1.38);
   }
   @media (min-width: 1440px) {
     width: 17rem; 
-    height: calc(17rem / 1.4);
+    height: calc(17rem / 1.38);
   }
 }
 
