@@ -1,9 +1,9 @@
 import React from 'react';
-import AboutModal from './AboutModal';
-import { useModalContext } from './ModalContext';
-import ContactModal from './ContactModal';
-import ProjectsModal from './ProjectsModal';
-import DarkModeToggle from './DarkModeToggle';
+import AboutModal from '../AboutModal/AboutModal';
+import { useModalContext } from '../../context/ModalContext';
+import ContactModal from '../ContactModal/ContactModal';
+import ProjectsModal from '../ProjectsModal/ProjectsModal';
+import DarkModeToggle from '../DarkModeToggle/DarkModeToggle';
 import styles from './Header.module.css';
 
 const Header = () => {

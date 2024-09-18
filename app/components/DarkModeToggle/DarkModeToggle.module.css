@@ -1,5 +1,7 @@
 .toggleButton {
-    @apply p-2 bg-transparent text-lg; 
+    padding: .5rem;
+    background-color: transparent;
+    font-size: 1.125rem;
     outline: none; 
     border: none; 
     cursor: pointer; 

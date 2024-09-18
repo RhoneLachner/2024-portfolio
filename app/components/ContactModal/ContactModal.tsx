@@ -1,5 +1,5 @@
 import React from 'react';
-import ContactForm from './ContactForm';
+import ContactForm from '../ContactForm/ContactForm';
 import Image from 'next/image';
 import styles from './ContactModal.module.css';
 
