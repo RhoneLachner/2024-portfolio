@@ -4,13 +4,11 @@ import { useDarkMode } from '../hooks/useDarkMode';
 import styles from './DarkModeToggle.module.css';
 
 const DarkModeToggle = () => {
-
-    // TO-DO - useDarkMode hook needs further configuration/fixes. 
-  const [darkMode, toggleDarkMode] = useDarkMode();
+  const [darkMode, toggleDarkMode] = useDarkMode(); // Use the custom hook
 
   return (
     <button onClick={toggleDarkMode} className={styles.toggleButton} aria-label="Toggle Dark Mode">
-      {darkMode ? '⚪️' : '⚫️'}
+      {darkMode ? '⚪️' : '⚫️'} {/* White for light mode, black for dark mode */}
     </button>
   );
 }

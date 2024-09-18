@@ -1,5 +1,5 @@
 .header {
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   padding: 0.5rem;
   display: flex;
   justify-content: space-between;
@@ -19,7 +19,7 @@
 
 .nav {
   display: flex;
-  gap: 2rem; /* space between nav links */
+  gap: 2rem;
   margin-right: 2.5rem;
 
   @media (min-width: 768px) {
@@ -40,10 +40,9 @@
   position: relative;
   font-size: 0.9rem;
   font-family: inherit;
-  font-weight: inherit;
   letter-spacing: 2.5px;
   font-size: 13px;
-  font-weight: 100px;
+  font-weight: 380;
 
   @media (min-width: 768px) {
     font-size: 12px;
@@ -59,4 +58,19 @@
   background-color: currentColor;
   bottom: 0;
   left: 0;
+}
+
+/* Light mode  */
+[data-theme='light'] .header {
+  background-color: white; /* Change the background to white in light mode */
+  color: black; /* Change the text color to black */
+}
+
+[data-theme='light'] .headerModalButton:hover::after,
+[data-theme='light'] .headerModalButton.active::after {
+  background-color: black; /* Make the hover effect black in light mode */
+}
+
+[data-theme='light'] .headerModalButton {
+  font-weight: 500;
 }

@@ -26,11 +26,11 @@ const getSpacing = () => {
   return 8;
 };
 
-const THICKNESS = getThickness(); //particles make cool patterns when numbers are changed slightly
+const THICKNESS = getThickness(); //particles make cool patterns when numbers are changed 
 const SPACING = getSpacing();
-const COLOR = 100;
+const COLOR = 125;
 const DRAG = 1;
-const EASE = 0.2;
+const EASE = 0.15;
 
 //Defaults: thickness=Math.pow(80, 2), spacing=8, color=200, drag=0.8, ease-0.15
 

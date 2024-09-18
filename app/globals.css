@@ -23,6 +23,18 @@
   font-style: normal;
 }
 
+/* Dark mode default */
+:root {
+  --background-color: #090909;
+  --text-color: #ffffff;
+}
+
+/* Light mode */
+[data-theme='light'] {
+  --background-color: #e7e7e7;
+  --text-color: #090909;
+}
+
 /* Base styles */
 html {
   scroll-behavior: smooth;
@@ -30,9 +42,9 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Montserrat', sans-serif; /* default font */
-  background-color: #090909;
-  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
   max-height: 100%;
 }
 
