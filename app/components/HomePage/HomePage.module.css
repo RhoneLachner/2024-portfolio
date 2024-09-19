@@ -132,12 +132,13 @@
   bottom: 4.5vh;
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
   border-radius: 5px;
   cursor: pointer;
   border: none;
   font-size: 12.5px;
-  color: #cbcbcb;
+  color: #ffffffde;
+
   padding: 11px 16px;
   z-index: 9999;
   letter-spacing: 1.75px;
@@ -145,9 +146,20 @@
   transition: opacity 0.3s ease;
 }
 
+[data-theme='light'] .particleResetButton {
+  background-color: rgba(255, 255, 255, 0.905);
+  color: #232323;
+  border: rgb(75, 75, 75) solid 1px;
+}
+
 .particleResetButton:hover {
-  background-color: rgb(91, 91, 91);
-  color: black;
+  background-color: rgba(241, 241, 241, 0.9);
+  color: rgb(1, 1, 1);
+}
+
+[data-theme='light'] .particleResetButton:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: rgb(214, 214, 214);
 }
 
 /* Hide reset button when modal is open */

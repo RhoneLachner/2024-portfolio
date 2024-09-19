@@ -31,7 +31,7 @@
 
 /* Light mode */
 [data-theme='light'] {
-  --background-color: #e7e7e7;
+  --background-color: #e6e6e6;
   --text-color: #090909;
 }
 
@@ -72,6 +72,10 @@ a {
   }
 }
 
+[data-theme='light'] .modalOverlay {
+  background-color: rgba(182, 182, 182, 0.5);
+}
+
 .modalContent {
   align-items: center;
   position: relative;
@@ -99,6 +103,10 @@ a {
   @media (min-width: 1200px) {
     max-width: 550px;
   }
+}
+
+[data-theme='light'] .modalContent {
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .closeButton {

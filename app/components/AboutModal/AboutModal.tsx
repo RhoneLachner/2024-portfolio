@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import styles from './AboutModal.module.css';
 import { aboutCopy } from '../../../public/modalCopy/aboutCopy';
@@ -9,18 +9,25 @@ interface AboutModalProps {
 }
 
 const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
+  const [theme, setTheme] = useState<string | null>(null);
+
+  useEffect(() => {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    setTheme(currentTheme);
+  }, []);
+
   if (!isOpen) return null;
+
+  const closeIconSrc =
+    theme === 'dark'
+      ? '/images/icons/close-icon-white.png'
+      : '/images/icons/close-icon-black.png';
 
   return (
     <div className="modalOverlay">
       <div className="modalContent">
         <button onClick={onClose} className="closeButton">
-          <Image
-            src="/images/icons/close-icon-white.png"
-            alt="Close Icon"
-            width={24}
-            height={24}
-          />
+          <Image src={closeIconSrc} alt="Close Icon" width={24} height={24} />
         </button>
 
         <div className={styles.bioImageContainer}>
