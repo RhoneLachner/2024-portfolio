@@ -27,18 +27,17 @@ export const projectsCopy: ProjectsCopy[] = [
          `,
   },
   {
-    title: 'Flourish Plant Care App',
-    description: `
-           Flourish is a full stack React app implementing a GraphQL backend and two APIs for plant image recognition and care.
-           Users can search for a plant by image recognition or name to find care instructions and tips.
-         `,
-  },
-
-  {
     title: 'Major Arcana Divinator App',
     description: `
            This app was primarily written with Vanilla JavaScript, HTML, and CSS. Users may choose a one or three-card Tarot spread,
            and a randomized reading is displayed. Past readings are stored in a history log using local storage.
+         `,
+  },
+  {
+    title: 'Flourish Plant Care App',
+    description: `
+           Flourish is a full stack React app implementing a GraphQL backend and two APIs for plant image recognition and care.
+           Users can search for a plant by image recognition or name to find care instructions and tips.
          `,
   },
   {
@@ -52,39 +51,29 @@ export const projectsCopy: ProjectsCopy[] = [
 
 export const projectsImages: { [key: string]: string[] } = {
   'Dev Portfolio': [
-    '/images/placeholder-images/placeholder-image1.png',
-    '/images/placeholder-images/placeholder-image2.png',
-    '/images/placeholder-images/placeholder-image3.png',
-    '/images/placeholder-images/placeholder-image4.png',
+    '/images/projectImages/portfolio-image1.png',
+    '/images/projectImages/portfolio-image2.png',
+    '/images/projectImages/portfolio-image3.png',
+    '/images/projectImages/portfolio-image4.png',
+    '/images/projectImages/portfolio-image5.png',
   ],
   'Work in Progress: Contingency Compass App': [
-    '/images/placeholder-images/placeholder-image1.png',
-    '/images/placeholder-images/placeholder-image2.png',
-    '/images/placeholder-images/placeholder-image3.png',
-    '/images/placeholder-images/placeholder-image4.png',
+    '/images/projectImages/compassapp-image1.png',
+    '/images/projectImages/compassapp-image2.png',
+    '/images/projectImages/compassapp-image3.png',
+
   ],
   'beHuman VS Code Extension': [
-    '/images/placeholder-images/placeholder-image1.png',
-    '/images/placeholder-images/placeholder-image2.png',
-    '/images/placeholder-images/placeholder-image3.png',
-    '/images/placeholder-images/placeholder-image4.png',
-  ],
-  'Flourish Plant Care App': [
-    '/images/placeholder-images/placeholder-image1.png',
-    '/images/placeholder-images/placeholder-image2.png',
-    '/images/placeholder-images/placeholder-image3.png',
-    '/images/placeholder-images/placeholder-image4.png',
+    '/images/projectImages/behuman-image1.png',
+    '/images/projectImages/behuman-image2.png',
+    '/images/projectImages/behuman-image3.png',
   ],
   'Major Arcana Divinator App': [
-    '/images/placeholder-images/placeholder-image1.png',
-    '/images/placeholder-images/placeholder-image2.png',
-    '/images/placeholder-images/placeholder-image3.png',
-    '/images/placeholder-images/placeholder-image4.png',
+    '/images/projectImages/tarot-image1.png',
+    '/images/projectImages/tarot-image2.png',
+    '/images/projectImages/tarot-image3.png',
   ],
-  'Karaoke Roulette App': [
-    '/images/placeholder-images/placeholder-image1.png',
-    '/images/placeholder-images/placeholder-image2.png',
-    '/images/placeholder-images/placeholder-image3.png',
-    '/images/placeholder-images/placeholder-image4.png',
-  ],
+  'Flourish Plant Care App': ['/images/projectImages/flourish-image1.png'],
+
+  'Karaoke Roulette App': ['/images/projectImages/karaoke-image1.png'],
 };

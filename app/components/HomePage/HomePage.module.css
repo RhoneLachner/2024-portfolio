@@ -57,10 +57,9 @@
     letter-spacing: 2.5px;
   }
 
-  @media (min-width: 900px) {
+  @media (min-width: 1024px) {
     margin-left: 3.5rem;
     font-size: 22px;
-    letter-spacing: 2.5px;
   }
 }
 
@@ -71,7 +70,6 @@
 
 .copyLine3 {
   margin-left: 1.5rem;
-
   @media (min-width: 768px) {
   }
 }
@@ -84,6 +82,7 @@
     margin-left: 6rem;
     line-height: 2;
   }
+
   @media (min-width: 900px) {
     margin-left: 7rem;
   }
@@ -102,9 +101,7 @@
     line-height: 3rem;
   }
 
-  @media (min-width: 900px) {
-    letter-spacing: 3px;
-    line-height: 3rem;
+  @media (min-width: 1024px) {
     margin-left: 0.3rem;
   }
 }

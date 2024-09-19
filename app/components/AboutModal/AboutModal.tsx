@@ -9,12 +9,12 @@ interface AboutModalProps {
 }
 
 const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
-  if (!isOpen) return null; // Only render if isOpen is true
+  if (!isOpen) return null;
 
   return (
-    <div className={styles.modalOverlay}>
-      <div className={styles.modalContent}>
-        <button onClick={onClose} className={styles.closeButton}>
+    <div className="modalOverlay">
+      <div className="modalContent">
+        <button onClick={onClose} className="closeButton">
           <Image
             src="/images/icons/close-icon-white.png"
             alt="Close Icon"

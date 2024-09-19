@@ -25,7 +25,7 @@
 
 /* Dark mode default */
 :root {
-  --background-color: #090909;
+  --background-color: #131313;
   --text-color: #ffffff;
 }
 
@@ -51,4 +51,68 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  max-height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: flex;
+  align-items: flex-start;
+  padding: 0 0 0 0;
+  justify-content: center;
+
+  @media (min-width: 768px) {
+    justify-content: flex-end;
+  }
+}
+
+.modalContent {
+  align-items: center;
+  position: relative;
+  overflow-y: auto;
+  z-index: 1000;
+  text-align: center;
+  border-radius: 4px;
+  background-color: rgb(0, 0, 0, 0.5);
+  color: white;
+  top: 56px;
+  height: calc(100vh - 106px);
+  width: 100%;
+  max-width: 480px;
+  margin: 0 6px;
+  padding: 45px 1rem 0 1rem;
+
+  @media (min-width: 1024px) {
+    max-width: 500px;
+  }
+
+  @media (min-width: 1024px) {
+    margin-right: 4px;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 550px;
+  }
+}
+
+.closeButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.closeButton img {
+  width: 20px;
+  height: 20px;
 }

@@ -5,37 +5,24 @@
   justify-content: center;
   margin: 0rem 0;
   width: 100%;
-
-  @media (min-width: 1024px) {
-    width: 50%;
-    margin-left: 6%;
-  }
-
-  @media (min-width: 1060px) {
-    width: 50%;
-  }
-
-  @media (min-width: 1200px) {
-    width: 50%;
-  }
-
-  @media (min-width: 1400) {
-    width: 50%;
-    margin-left: 18%;
-  }
 }
 
 .imageContainer {
   position: relative;
-  width: 16rem;
-  height: 8rem;
+  width: 19rem;
+  height: 11rem;
   overflow: hidden;
   max-width: 700px;
   border-radius: 35px;
 
-  @media (min-width: 1024px) {
-    width: 16rem;
-    height: 8rem;
+  @media (min-width: 768px) {
+    width: calc(19rem * 1.04);
+    height: calc(11rem * 1.04);
+  }
+
+  @media (min-width: 1200px) {
+    width: calc(19rem * 1.1);
+    height: calc(11rem * 1.1);
   }
 }
 
@@ -58,18 +45,19 @@
 }
 
 .chevronLeft {
-  left: 5px;
+  left: 1px;
 }
 
 .chevronRight {
-  right: 5px;
+  right: 1px;
 }
 
 .chevronLeftImage,
 .chevronRightImage {
-  width: 22px;
+  width: 20px;
   height: auto;
   box-sizing: border-box;
+  opacity: 80%;
 }
 
 .chevronLeftImage:hover,
