@@ -13,6 +13,7 @@ export const projectsCopy: ProjectsCopy[] = [
   },
   {
     title: 'Work in Progress: Contingency Compass App',
+    
     description: `
            Full Stack web application designed to provide critical information and resources during natural disasters. 
            Frontend: React, HTML, CSS, JavaScript. Backend: Django, Django REST Framework. Database: Python.APIs: FEMA API, OpenWeatherMap API, Google Maps API

@@ -32,7 +32,18 @@ const ProjectsModal: React.FC<ProjectsModalProps> = ({ isOpen, onClose }) => {
                 )}
 
                 <div className={styles.carouselTextContainer}>
-                  <div className={styles.carouselTitle}>{project.title}</div>
+                  <div className={styles.carouselTitle}>
+                    {project.title ===
+                    'Work in Progress: Contingency Compass App' ? (
+                      <>
+                        Work in Progress: <br />
+                        <span>Contingency Compass App</span>
+                      </>
+                    ) : (
+                      project.title
+                    )}
+                  </div>
+
                   <div className={styles.carouselDescription}>
                     {project.description}
                   </div>
