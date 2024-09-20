@@ -24,18 +24,13 @@
 }
 
 /* Dark mode default */
+/* Base styles */
+
 :root {
   --background-color: #0e0e0e;
   --text-color: #ffffff;
 }
 
-/* Light mode */
-[data-theme='light'] {
-  --background-color: #eeecec;
-  --text-color: #000000;
-}
-
-/* Base styles */
 html {
   scroll-behavior: smooth;
 }
@@ -51,6 +46,10 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+::selection {
+  background-color: rgba(151, 184, 124, 0.289);
 }
 
 .modalOverlay {
@@ -70,10 +69,6 @@ a {
   @media (min-width: 768px) {
     justify-content: flex-end;
   }
-}
-
-[data-theme='light'] .modalOverlay {
-  background-color: rgba(195, 195, 195, 0.4);
 }
 
 .modalContent {
@@ -105,10 +100,6 @@ a {
   }
 }
 
-[data-theme='light'] .modalContent {
-  background-color: rgba(255, 255, 255, 0.55);
-}
-
 .closeButton {
   position: absolute;
   top: 1rem;
@@ -124,10 +115,6 @@ a {
   width: 18px;
   height: 18px;
 }
-[data-theme='light'] .closeButton img {
-  width: 19px;
-  height: 19px;
-}
 
 .socialIconsContainer {
   display: flex;
@@ -141,27 +128,50 @@ a {
 }
 
 .socialIconImage {
-  height: 64px;
+  height: 65px;
   width: auto;
-  margin: 0 1.4rem;
+  margin: 22px;
   box-sizing: border-box;
 
-  @media (min-width: 768px) {
-    height: 3.9rem;
-    margin: 1.2rem;
+  @media (min-width: 550px) {
+    margin: 25px;
+    height: 67px;
   }
 
   @media (min-width: 1024px) {
-    margin: 1.5rem;
+    margin: 25px;
+    height: 70px;
   }
 }
 
 .socialIconImage:hover {
-  border: 1.1px solid white;
+  border: 1px solid white;
   border-radius: 50%;
 }
 
+/* Light mode */
+
+[data-theme='light'] {
+  --background-color: #ededed;
+  --text-color: #000000;
+}
+
+[data-theme='light'] .modalOverlay {
+  background-color: rgba(195, 195, 195, 0.4);
+}
+
+[data-theme='light'] .modalContent {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+[data-theme='light'] .closeButton img {
+  width: 20px;
+  height: 20px;
+}
+
 [data-theme='light'] .socialIconImage:hover {
-  outline: 1.5px solid rgb(8, 8, 8);
+  outline: 1.9px solid rgb(8, 8, 8);
   border: none;
 }
+
+

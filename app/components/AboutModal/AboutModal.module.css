@@ -26,6 +26,7 @@
   line-height: 1.75;
   max-width: 290px;
   color: var(--text-color);
+  font-weight: 350;
 
   @media (min-width: 530px) {
     max-width: 360px;

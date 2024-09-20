@@ -39,19 +39,6 @@ const DynamicSocialIcons: React.FC = () => {
   return (
     <div className="socialIconsContainer">
       <a
-        href="https://github.com/RhoneLachner"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Image
-          className="socialIconImage"
-          src={socialLinks.github[theme === 'dark' ? 'dark' : 'light']}
-          alt="GitHub Icon"
-          width={48}
-          height={48}
-        />
-      </a>
-      <a
         href="https://www.linkedin.com/in/rhonelachner/"
         target="_blank"
         rel="noopener noreferrer"
@@ -60,6 +47,19 @@ const DynamicSocialIcons: React.FC = () => {
           className="socialIconImage"
           src={socialLinks.linkedin[theme === 'dark' ? 'dark' : 'light']}
           alt="LinkedIn Icon"
+          width={48}
+          height={48}
+        />
+      </a>
+      <a
+        href="https://github.com/RhoneLachner"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Image
+          className="socialIconImage"
+          src={socialLinks.github[theme === 'dark' ? 'dark' : 'light']}
+          alt="GitHub Icon"
           width={48}
           height={48}
         />

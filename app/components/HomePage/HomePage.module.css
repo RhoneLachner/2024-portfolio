@@ -43,12 +43,6 @@
     font-size: 1.1rem;
   }
 }
-[data-theme='light'] .copyLine1,
-.copyLine2,
-.copyLine3,
-.copyLine4 {
-  font-weight: 530;
-}
 
 .copyLine2 {
   margin-left: 3.2rem;
@@ -123,9 +117,6 @@
     margin-top: 7rem;
   }
 }
-[data-theme='light'] .copyLine5 {
-  font-weight: 550;
-}
 
 .particleResetButtonContainer {
   position: absolute;
@@ -145,33 +136,20 @@
   border-radius: 5px;
   cursor: pointer;
   border: none;
-  font-size: 12.5px;
+  font-size: 12.3px;
   color: #ffffffde;
-
   padding: 11px 16px;
   z-index: 9999;
-  letter-spacing: 1.75px;
   display: block;
   transition: opacity 0.3s ease;
-}
-
-[data-theme='light'] .particleResetButton {
-  background-color: rgba(255, 255, 255, 0.766);
-  color: #232323;
-  border: rgb(175, 175, 175) solid 1px;
-  padding: calc(11px * 0.9) calc(16px * 0.9);
-  font-weight: 450;
+  font-family: 'Montserrat-Regular', sans-serif;
+  font-weight: 300;
+  letter-spacing: 2.5px;
 }
 
 .particleResetButton:hover {
   background-color: rgba(241, 241, 241, 0.9);
   color: rgb(1, 1, 1);
-}
-
-[data-theme='light'] .particleResetButton:hover {
-  background-color: rgba(0, 0, 0, 0.954);
-  color: rgb(214, 214, 214);
-  border: #232323;
 }
 
 /* Hide reset button when modal is open */
@@ -198,4 +176,32 @@
   .hideOnSmallScreens .internalCopyContainer {
     display: block;
   }
+}
+
+/* light mode */
+
+[data-theme='light'] .copyLine1,
+.copyLine2,
+.copyLine3,
+.copyLine4 {
+  font-weight: 530;
+}
+
+[data-theme='light'] .particleResetButton:hover {
+  background-color: rgba(0, 0, 0, 0.954);
+  color: rgb(214, 214, 214);
+  border: #232323;
+}
+
+[data-theme='light'] .copyLine5 {
+  font-weight: 550;
+}
+
+[data-theme='light'] .particleResetButton {
+  background-color: rgba(255, 255, 255, 0.766);
+  color: #232323;
+  border: rgb(175, 175, 175) solid 1px;
+  padding: calc(11px * 0.9) calc(16px * 0.9);
+  font-family: 'Montserrat-Regular', sans-serif;
+  font-weight: 550;
 }
