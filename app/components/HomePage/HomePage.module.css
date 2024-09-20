@@ -160,6 +160,7 @@
   color: #232323;
   border: rgb(175, 175, 175) solid 1px;
   padding: calc(11px * 0.9) calc(16px * 0.9);
+  font-weight: 450;
 }
 
 .particleResetButton:hover {
@@ -170,6 +171,7 @@
 [data-theme='light'] .particleResetButton:hover {
   background-color: rgba(0, 0, 0, 0.954);
   color: rgb(214, 214, 214);
+  border: #232323;
 }
 
 /* Hide reset button when modal is open */

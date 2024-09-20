@@ -137,6 +137,7 @@
 }
 
 [data-theme='light'] .submitButton:hover {
-  background-color: rgb(36, 36, 36);
-  color: rgb(255, 255, 255);
+  background-color: rgb(8, 8, 8);
+  border: rgb(8, 8, 8);
+  color: rgba(255, 255, 255, 0.806);
 }

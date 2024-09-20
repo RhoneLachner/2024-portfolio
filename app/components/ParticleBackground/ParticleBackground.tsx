@@ -10,7 +10,7 @@ import styles from './ParticleBackground.module.css';
 
 const THICKNESS = 80 ** 2;
 const SPACING = 8;
-const COLOR = 105;
+const COLOR = 110;
 const DRAG = 1;
 const EASE = 0.15;
 
