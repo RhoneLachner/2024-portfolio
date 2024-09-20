@@ -1,8 +1,11 @@
 import React from 'react';
 import ImageCarousel from '../ImageCarousel/ImageCarousel';
 import styles from './ProjectsModal.module.css';
-import Image from 'next/image';
-import { projectsCopy, projectsImages } from '../../../public/modalCopy/projectsCopy';
+import {
+  projectsCopy,
+  projectsImages,
+} from '../../../public/modalCopy/projectsCopy';
+import DynamicCloseButton from '../DynamicIcons/DynamicCloseButton';
 
 interface ProjectsModalProps {
   isOpen: boolean;
@@ -15,15 +18,7 @@ const ProjectsModal: React.FC<ProjectsModalProps> = ({ isOpen, onClose }) => {
   return (
     <div className="modalOverlay">
       <div className="modalContent">
-        <button onClick={onClose} className="closeButton">
-          <Image
-            src="/images/icons/close-icon-white.png"
-            alt="Close Icon"
-            width={24}
-            height={24}
-          />
-        </button>
-
+        <DynamicCloseButton onClose={onClose} />
         <div className={styles.carouselStack}>
           {projectsCopy.map((project, index) => {
             const projectImages = projectsImages[project.title] || [];

@@ -43,6 +43,12 @@
     font-size: 1.1rem;
   }
 }
+[data-theme='light'] .copyLine1,
+.copyLine2,
+.copyLine3,
+.copyLine4 {
+  font-weight: 530;
+}
 
 .copyLine2 {
   margin-left: 3.2rem;
@@ -117,6 +123,9 @@
     margin-top: 7rem;
   }
 }
+[data-theme='light'] .copyLine5 {
+  font-weight: 550;
+}
 
 .particleResetButtonContainer {
   position: absolute;
@@ -147,9 +156,10 @@
 }
 
 [data-theme='light'] .particleResetButton {
-  background-color: rgba(255, 255, 255, 0.905);
+  background-color: rgba(255, 255, 255, 0.766);
   color: #232323;
-  border: rgb(75, 75, 75) solid 1px;
+  border: rgb(175, 175, 175) solid 1px;
+  padding: calc(11px * 0.9) calc(16px * 0.9);
 }
 
 .particleResetButton:hover {
@@ -158,7 +168,7 @@
 }
 
 [data-theme='light'] .particleResetButton:hover {
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.954);
   color: rgb(214, 214, 214);
 }
 

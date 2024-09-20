@@ -65,9 +65,9 @@
   text-align: center;
 }
 [data-theme='light'] .carouselDescription {
-  font-weight: 400;
+  font-weight: 450;
 }
 
 [data-theme='light'] .carouselTitle {
-  font-weight: 550;
+  font-weight: 580;
 }

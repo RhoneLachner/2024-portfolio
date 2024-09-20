@@ -36,3 +36,7 @@
     max-width: 360px;
   }
 }
+
+[data-theme='light'] .bioCopy {
+  font-weight: 450;
+}
