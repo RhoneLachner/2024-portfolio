@@ -39,8 +39,7 @@ const ProjectsModal: React.FC<ProjectsModalProps> = ({ isOpen, onClose }) => {
                     rel="noopener noreferrer"
                   >
                     <div className={styles.carouselTitle}>
-                      {project.title ===
-                      'Work in Progress: Contingency Compass App' ? (
+                      {project.title === 'Work in Progress: Contingency Compass App' ? (
                         <>
                           Work in Progress: <br />
                           <span>Contingency Compass App</span>
@@ -49,22 +48,25 @@ const ProjectsModal: React.FC<ProjectsModalProps> = ({ isOpen, onClose }) => {
                         project.title
                       )}
                     </div>
-                    {project.title !== 'Dev Portfolio' &&
-                    project.title !==
-                      'Work in Progress: Contingency Compass App' ? (
-                      <a
-                        className={styles.carouselGithubLink}
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {project.githubCopy}
-                      </a>
-                    ) : null}
                   </a>
+                  
+                  {project.title !== 'Dev Portfolio' &&
+                  project.title !== 'Work in Progress: Contingency Compass App' ? (
+                    <a
+                      className={styles.carouselGithubLink}
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {project.githubCopy}
+                    </a>
+                  ) : null}
+                  
                   <div className={styles.carouselDescription}>
-                  {project.description.split('\n').map((paragraph, index) => (
-                      <p className={styles.carouselParagraph} key={index}>{paragraph}</p>
+                    {project.description.split('\n').map((paragraph, index) => (
+                      <p className={styles.carouselParagraph} key={index}>
+                        {paragraph}
+                      </p>
                     ))}
                   </div>
                 </div>
