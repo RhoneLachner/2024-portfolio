@@ -12,11 +12,13 @@ export const projectsCopy: ProjectsCopy[] = [
     githubCopy: 'GitHub',
     description: `
       This portfolio site was built using Next.js, TypeScript, and Tailwind CSS to showcase my work as a developer and highlight my passion for clean, responsive design. Leveraging server-side rendering (SSR) and static site generation (SSG), the site ensures fast performance and strong SEO.
-      I used a component-based architecture, custom hooks, and state management to create an engaging user experience, while Tailwind CSS helped streamline the design process with scalable, efficient styling. I invite you to explore my projects, and the source code is available on GitHub for those interested in a closer look!
+      I used a component-based architecture, custom hooks, and state management to create an engaging user experience, while Tailwind CSS helped streamline the design process with scalable, efficient styling. Playwright was implemented to perform end-to-end testing, ensuring the contact form and email functionality work seamlessly. 
+      I invite you to explore my projects, and the source code is available on GitHub for those interested in a closer look!
     `,
     url: 'https://github.com/RhoneLachner/2024-portfolio',
     githubUrl: 'https://github.com/RhoneLachner/2024-portfolio',
   },
+  
   {
     title: 'Work in Progress: Contingency Compass App',
     githubCopy: 'GitHub',
