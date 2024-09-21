@@ -11,6 +11,11 @@ export default async function sendEmail(
 
   const { email, message } = req.body;
 
+  // Comment out next three lines to test delivery to real email account
+  if (email === 'test@example.com') {
+    return res.status(200).json({ message: 'Test Email sent successfully!' });
+  }
+
   if (!email || !message) {
     return res.status(400).json({ message: 'Email and message are required' });
   }

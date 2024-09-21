@@ -39,7 +39,8 @@ const ProjectsModal: React.FC<ProjectsModalProps> = ({ isOpen, onClose }) => {
                     rel="noopener noreferrer"
                   >
                     <div className={styles.carouselTitle}>
-                      {project.title === 'Work in Progress: Contingency Compass App' ? (
+                      {project.title ===
+                      'Work in Progress: Contingency Compass App' ? (
                         <>
                           Work in Progress: <br />
                           <span>Contingency Compass App</span>
@@ -49,9 +50,10 @@ const ProjectsModal: React.FC<ProjectsModalProps> = ({ isOpen, onClose }) => {
                       )}
                     </div>
                   </a>
-                  
+
                   {project.title !== 'Dev Portfolio' &&
-                  project.title !== 'Work in Progress: Contingency Compass App' ? (
+                  project.title !==
+                    'Work in Progress: Contingency Compass App' ? (
                     <a
                       className={styles.carouselGithubLink}
                       href={project.githubUrl}
@@ -61,7 +63,7 @@ const ProjectsModal: React.FC<ProjectsModalProps> = ({ isOpen, onClose }) => {
                       {project.githubCopy}
                     </a>
                   ) : null}
-                  
+
                   <div className={styles.carouselDescription}>
                     {project.description.split('\n').map((paragraph, index) => (
                       <p className={styles.carouselParagraph} key={index}>

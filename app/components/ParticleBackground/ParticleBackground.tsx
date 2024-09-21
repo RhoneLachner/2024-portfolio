@@ -42,7 +42,7 @@ const ParticleBackground = forwardRef((props: ParticleBackgroundProps, ref) => {
   }));
 
   useEffect(() => {
-    console.log('ParticleBackground rendered');
+    console.info('ParticleBackground rendered');
     if (typeof window === 'undefined') return;
 
     let w: number, h: number;
