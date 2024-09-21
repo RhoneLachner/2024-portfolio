@@ -47,8 +47,6 @@ const Header = () => {
           </button>
         </nav>
       </header>
-
-      {/* Pass isOpen and onClose to the modals */}
       <AboutModal
         isOpen={openModal === 'about'}
         onClose={() => setOpenModal(null)}
