@@ -23,9 +23,10 @@
         "name": "next"
       }
     ],
+    "baseUrl": ".",
     "paths": {
       "@/*": [
-        "./src/*"
+        "./src/*", "node_modules/*", "src/types/*"
       ]
     }
   },
@@ -37,6 +38,6 @@
     "declarations.d.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules", "dist"
   ]
 }
