@@ -17,10 +17,8 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
       <div className="modalContent">
         <DynamicCloseButton onClose={onClose} />
 
-        {/* Social icons container with dynamic icons */}
         <div className={styles.socialIconsContainer}>
           <DynamicSocialIcons />{' '}
-          {/* Use the dynamic social icons component here */}
         </div>
 
         <div className={styles.contactFormContainer}>

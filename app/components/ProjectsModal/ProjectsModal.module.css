@@ -31,11 +31,11 @@
   max-width: 275px;
   color: var(--text-color);
 
-  @media (min-width: 768px) {
+  @media (min-width: 475px) {
     max-width: 290px;
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: 768px) {
     max-width: 320px;
   }
 }
@@ -44,14 +44,13 @@
   font-weight: 480;
   letter-spacing: 1.7px;
   font-size: 13px;
-  margin-top: -0.3rem;
+  margin-top: -0.4rem;
   margin-bottom: 1px;
   line-height: 18px;
   font-family: 'Montserrat-Regular', sans-serif;
 }
 
 .carouselTitleLink :hover {
-  /* font-weight: 600; */
   color: rgb(156, 156, 156);
 }
 
@@ -62,17 +61,17 @@
   line-height: 8px;
   margin-top: 0;
   font-family: 'Montserrat-Regular', sans-serif;
-    @media (min-width: 768px) {
+  @media (min-width: 768px) {
     font-size: 12px;
   }
 }
 
 .carouselDescription {
-  font-weight: 300;
+  font-weight: 250;
   font-size: 11.5px;
   padding-top: 5px;
   padding-bottom: 28px;
-  max-width: 20rem;
+  width: auto;
   line-height: 1.5;
   text-align: center;
   letter-spacing: 0.35px;
@@ -82,6 +81,10 @@
     font-size: 11px;
     padding-bottom: 32px;
   }
+}
+
+.carouselParagraph {
+  margin: 0;
 }
 
 [data-theme='light'] .carouselDescription {

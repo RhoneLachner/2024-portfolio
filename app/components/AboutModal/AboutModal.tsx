@@ -29,7 +29,7 @@ const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
 
         <div className={styles.bioCopy}>
           {aboutCopy.bio.map((paragraph, index) => (
-            <p key={index}>{paragraph}</p>
+            <p className={styles.bioParagraph} key={index}>{paragraph}</p>
           ))}
         </div>
       </div>
