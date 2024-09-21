@@ -78,7 +78,7 @@ a {
   z-index: 1000;
   text-align: center;
   border-radius: 4px;
-  background-color: rgb(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
   top: 56px;
   height: calc(100vh - 106px);

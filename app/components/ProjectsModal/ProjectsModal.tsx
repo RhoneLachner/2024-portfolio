@@ -32,18 +32,35 @@ const ProjectsModal: React.FC<ProjectsModalProps> = ({ isOpen, onClose }) => {
                 )}
 
                 <div className={styles.carouselTextContainer}>
-                  <div className={styles.carouselTitle}>
-                    {project.title ===
-                    'Work in Progress: Contingency Compass App' ? (
-                      <>
-                        Work in Progress: <br />
-                        <span>Contingency Compass App</span>
-                      </>
-                    ) : (
-                      project.title
-                    )}
-                  </div>
-
+                  <a
+                    className={styles.carouselTitleLink}
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div className={styles.carouselTitle}>
+                      {project.title ===
+                      'Work in Progress: Contingency Compass App' ? (
+                        <>
+                          Work in Progress: <br />
+                          <span>Contingency Compass App</span>
+                        </>
+                      ) : (
+                        project.title
+                      )}
+                    </div>
+                   {project.title !== 'Dev Portfolio' &&
+                  project.title !== 'Work in Progress: Contingency Compass App' ? (
+                    <a
+                      className={styles.carouselGithubLink}
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {project.githubCopy}
+                    </a>
+                  ) : null}
+                  </a>
                   <div className={styles.carouselDescription}>
                     {project.description}
                   </div>
