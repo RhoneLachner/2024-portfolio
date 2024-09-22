@@ -1,8 +1,16 @@
+/**
+ * This context file provides state management for modals.
+ * It defines an `openModal` state to track the currently active modal,
+ * and a `setOpenModal` function to update which modal is open.
+ * If no modal is open, the state is set to null.
+ * The `ModalProvider` wraps components with this context to manage modal state.
+ */
+
 import React, { createContext, useState, useContext } from 'react';
 
 interface ModalContextType {
-  openModal: string | null; // Allow it to be either a string or null
-  setOpenModal: (modalName: string | null) => void; // Ensure the setter can accept both string and null
+  openModal: string | null;
+  setOpenModal: (modalName: string | null) => void; 
 }
 
 const ModalContext = createContext<ModalContextType>({
