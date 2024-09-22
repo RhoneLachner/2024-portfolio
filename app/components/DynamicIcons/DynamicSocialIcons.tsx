@@ -1,18 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
+import { ICONS } from '../../assets/icons'; // Importing icon paths
+import { socialLinkCopy } from '../../assets/socialLinks';
 
 const socialLinks = {
   github: {
-    light: '/images/icons/socialIcons/github-icon-light.png',
-    dark: '/images/icons/socialIcons/github-icon-dark.png',
+    light: ICONS.githubLight,
+    dark: ICONS.githubDark,
   },
   linkedin: {
-    light: '/images/icons/socialIcons/linkedin-icon-light.png',
-    dark: '/images/icons/socialIcons/linkedin-icon-dark.png',
+    light: ICONS.linkedInLight,
+    dark: ICONS.linkedInDark,
   },
-  music: {
-    light: '/images/icons/socialIcons/music-icon-light.png',
-    dark: '/images/icons/socialIcons/music-icon-dark.png',
+  bandsite: {
+    light: ICONS.bandSiteLight,
+    dark: ICONS.bandSiteDark,
   },
 };
 
@@ -39,7 +41,7 @@ const DynamicSocialIcons: React.FC = () => {
   return (
     <div className="socialIconsContainer">
       <a
-        href="https://www.linkedin.com/in/rhonelachner/"
+        href={socialLinkCopy.linkedin}
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -51,11 +53,7 @@ const DynamicSocialIcons: React.FC = () => {
           height={48}
         />
       </a>
-      <a
-        href="https://github.com/RhoneLachner"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a href={socialLinkCopy.github} target="_blank" rel="noopener noreferrer">
         <Image
           className="socialIconImage"
           src={socialLinks.github[theme === 'dark' ? 'dark' : 'light']}
@@ -65,13 +63,13 @@ const DynamicSocialIcons: React.FC = () => {
         />
       </a>
       <a
-        href="https://hopeandfailure.com/"
+        href={socialLinkCopy.bandsite}
         target="_blank"
         rel="noopener noreferrer"
       >
         <Image
           className="socialIconImage"
-          src={socialLinks.music[theme === 'dark' ? 'dark' : 'light']}
+          src={socialLinks.bandsite[theme === 'dark' ? 'dark' : 'light']}
           alt="Music Icon"
           width={48}
           height={48}

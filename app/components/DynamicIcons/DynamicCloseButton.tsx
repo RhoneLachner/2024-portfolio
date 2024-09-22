@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
+import { ICONS } from '../../assets/icons'; // Importing icon paths
 
 interface CloseButtonProps {
   onClose: () => void;
@@ -25,14 +26,11 @@ const DynamicCloseButton: React.FC<CloseButtonProps> = ({ onClose }) => {
     return () => observer.disconnect();
   }, []);
 
-  const closeIconSrc =
-    theme === 'dark'
-      ? '/images/icons/close-icon-white.png'
-      : '/images/icons/close-icon-black.png';
+  const closeIcon = theme === 'dark' ? ICONS.closeWhite : ICONS.closeBlack;
 
   return (
     <button onClick={onClose} className="closeButton">
-      <Image src={closeIconSrc} alt="Close Icon" width={18} height={18} />
+      <Image src={closeIcon} alt="Close Icon" width={18} height={18} />
     </button>
   );
 };

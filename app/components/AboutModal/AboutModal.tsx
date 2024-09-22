@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import styles from './AboutModal.module.css';
-import { aboutCopy } from '../../../public/modalCopy/aboutCopy';
+import { aboutCopy } from '../../assets/copy/aboutModalCopy';
 import DynamicCloseButton from '../DynamicIcons/DynamicCloseButton';
 
 interface AboutModalProps {
@@ -19,7 +19,7 @@ const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
         <div className={styles.bioImageContainer}>
           <Image
             className={styles.bioImage}
-            src="/images/bio-image.jpg"
+            src={aboutCopy.bioImage}
             alt="Bio Image"
             width={320}
             height={320}
@@ -29,7 +29,9 @@ const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
 
         <div className={styles.bioCopy}>
           {aboutCopy.bio.map((paragraph, index) => (
-            <p className={styles.bioParagraph} key={index}>{paragraph}</p>
+            <p className={styles.bioParagraph} key={index}>
+              {paragraph}
+            </p>
           ))}
         </div>
       </div>
