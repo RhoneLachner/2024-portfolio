@@ -1,8 +1,15 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
-import styles from './ImageCarousel.module.css'; // Import the CSS module
+import styles from './ImageCarousel.module.css';
+import { projectsImages } from '../../assets/copy/projectsModalCopy';
+import { ICONS } from '../../assets/icons';
 
-const ImageCarousel: React.FC<{ images: string[] }> = ({ images }) => {
+interface ImageCarouselProps {
+  projectTitle: string;
+}
+
+const ImageCarousel: React.FC<ImageCarouselProps> = ({ projectTitle }) => {
+  const images = projectsImages[projectTitle] || []; // Select images based on project title
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const goToNext = () => {
@@ -15,6 +22,10 @@ const ImageCarousel: React.FC<{ images: string[] }> = ({ images }) => {
     );
   };
 
+  if (images.length === 0) {
+    return <div>No images available for this project</div>;
+  }
+
   return (
     <div className={styles.carousel}>
       <div className={styles.imageContainer}>
@@ -22,7 +33,7 @@ const ImageCarousel: React.FC<{ images: string[] }> = ({ images }) => {
           <button className={styles.chevronLeft} onClick={goToPrevious}>
             <Image
               className={styles.chevronLeftImage}
-              src="/images/icons/chevron-left.png"
+              src={ICONS.chevronLeft}
               alt="Previous"
               width={40}
               height={40}
@@ -32,9 +43,9 @@ const ImageCarousel: React.FC<{ images: string[] }> = ({ images }) => {
 
         <Image
           src={images[currentIndex]}
-          alt="Carousel Image"
-          width={200} // Placeholder dimensions
-          height={100} // Placeholder dimensions
+          alt={`Image for ${projectTitle}`}
+          width={200}
+          height={100}
           className={styles.carouselImage}
         />
 
@@ -42,7 +53,7 @@ const ImageCarousel: React.FC<{ images: string[] }> = ({ images }) => {
           <button className={styles.chevronRight} onClick={goToNext}>
             <Image
               className={styles.chevronRightImage}
-              src="/images/icons/chevron-right.png"
+              src={ICONS.chevronRight}
               alt="Next"
               width={40}
               height={40}

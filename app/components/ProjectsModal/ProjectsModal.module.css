@@ -48,9 +48,10 @@
   margin-bottom: 1px;
   line-height: 18px;
   font-family: 'Montserrat-Regular', sans-serif;
+  cursor: pointer;
 }
 
-.carouselTitleLink :hover {
+.carouselTitle:hover {
   color: rgb(156, 156, 156);
 }
 
@@ -61,9 +62,11 @@
   line-height: 8px;
   margin-top: 0;
   font-family: 'Montserrat-Regular', sans-serif;
-  @media (min-width: 768px) {
-    font-size: 12px;
-  }
+  cursor: pointer;
+}
+
+.carouselGithubLink:hover {
+  color: rgb(156, 156, 156);
 }
 
 .carouselDescription {
@@ -100,7 +103,7 @@
   }
 }
 
-[data-theme='light'] .carouselTitleLink :hover {
+[data-theme='light'] .carouselTitleLink:hover {
   color: rgb(178, 178, 178);
 }
 
