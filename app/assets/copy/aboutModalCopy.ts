@@ -1,3 +1,5 @@
+// This file contains the copy used in the AboutModal component.
+
 interface AboutCopy {
   bioImage: string;
   bio: string[];

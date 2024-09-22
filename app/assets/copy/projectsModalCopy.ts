@@ -1,3 +1,5 @@
+// This file contains the copy and image references used in the ProjectsModal component.
+
 interface ProjectsCopy {
   title: string;
   description: string;
