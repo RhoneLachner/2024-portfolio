@@ -1,3 +1,11 @@
+/**
+ * Header Component
+ *
+ * This component renders the header of the website with navigation buttons to open modals (About, Projects, Contact).
+ * It includes the DarkModeToggle component, and manages the modal state via the `useModalContext` hook.
+ * The modals for About, Projects, and Contact are conditionally rendered based on the current open modal.
+ */
+
 import React from 'react';
 import AboutModal from '../AboutModal/AboutModal';
 import { useModalContext } from '../../context/ModalContext';
@@ -7,8 +15,13 @@ import DarkModeToggle from '../DarkModeToggle/DarkModeToggle';
 import styles from './Header.module.css';
 
 const Header = () => {
+  // Modal state from ModalContext
   const { openModal, setOpenModal } = useModalContext();
 
+  /**
+   * Toggles the modal state for a specific modal.
+   * If the current modal is already open, it closes it. Otherwise, it opens the selected modal.
+   */
   const openModalHandler = (modalName: string) => {
     setOpenModal(openModal === modalName ? null : modalName);
   };
@@ -47,6 +60,8 @@ const Header = () => {
           </button>
         </nav>
       </header>
+
+      {/* Conditionally render the modals based on the current open modal */}
       <AboutModal
         isOpen={openModal === 'about'}
         onClose={() => setOpenModal(null)}
