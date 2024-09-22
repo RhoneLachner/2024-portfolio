@@ -1,13 +1,25 @@
-'use client';
+/**
+ * HomePage Component
+ * 
+ * This component renders the homepage with the ParticleBackground component and copy content.
+ * It includes a particle reset button to reset the particle background.
+ * Copy and button element visibility is based on modal state; not visible on small screens when modals are open.
+ */
+
+'use client'; 
 import React, { useRef } from 'react';
 import { useModalContext } from '../../context/ModalContext';
 import ParticleBackground from '../ParticleBackground/ParticleBackground';
 import styles from './HomePage.module.css';
 
 const HomePage: React.FC = () => {
+  // Ref to trigger particle reset
   const particleRef = useRef<{ resetParticles: () => void } | null>(null);
-  const { openModal } = useModalContext();
 
+  // Access modal state from context
+  const { openModal } = useModalContext(); 
+
+  // Function to reset particle background
   const handleResetClick = () => {
     if (particleRef.current) {
       particleRef.current.resetParticles();
@@ -17,6 +29,7 @@ const HomePage: React.FC = () => {
   return (
     <div className={styles.homePage}>
       <div className={styles.particleBackgroundContainer}>
+        {/* Particle background with reference to reset particles */}
         <ParticleBackground ref={particleRef} />
       </div>
 
