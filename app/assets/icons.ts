@@ -9,9 +9,9 @@ export const ICONS = {
   githubDark: '/images/icons/socialIcons/github-icon-dark.png',
   githubLight: '/images/icons/socialIcons/github-icon-light.png',
 
-  bandSiteDark: '/images/icons/socialIcons/music-icon-dark',
-  bandSiteLight: '/images/icons/socialIcons/music-icon-light',
+  bandsiteDark: '/images/icons/socialIcons/music-icon-dark.png',
+  bandsiteLight: '/images/icons/socialIcons/music-icon-light.png',
 
-  linkedInDark: '/images/icons/socialIcons/linkedin-icon-dark',
-  linkedInLight: '/images/icons/socialIcons/linkedin-icon-light',
+  linkedinDark: '/images/icons/socialIcons/linkedin-icon-dark.png',
+  linkedinLight: '/images/icons/socialIcons/linkedin-icon-ligh.png',
 };

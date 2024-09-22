@@ -9,12 +9,12 @@ const socialLinks = {
     dark: ICONS.githubDark,
   },
   linkedin: {
-    light: ICONS.linkedInLight,
-    dark: ICONS.linkedInDark,
+    light: ICONS.linkedinLight,
+    dark: ICONS.linkedinDark,
   },
   bandsite: {
-    light: ICONS.bandSiteLight,
-    dark: ICONS.bandSiteDark,
+    light: ICONS.bandsiteLight,
+    dark: ICONS.bandsiteDark,
   },
 };
 
