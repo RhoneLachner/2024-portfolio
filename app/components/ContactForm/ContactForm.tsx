@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './ContactForm.module.css';
 
 const ContactForm = () => {
@@ -6,8 +6,18 @@ const ContactForm = () => {
   const [message, setMessage] = useState('');
   const [responseMessage, setResponseMessage] = useState('');
 
+  useEffect(() => {
+    if (email && message) {
+      setResponseMessage('');
+    }
+  }, [email, message]);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!email || !message) {
+      setResponseMessage('Please fill in both the email and message fields.');
+      return;
+    }
 
     try {
       const res = await fetch('/api/sendEmail', {
@@ -52,7 +62,9 @@ const ContactForm = () => {
         className={styles.textArea}
       ></textarea>
 
-      {responseMessage && <div className={styles.responseMessage}>{responseMessage}</div>}
+      {responseMessage && (
+        <div className={styles.responseMessage}>{responseMessage}</div>
+      )}
     </form>
   );
 };
