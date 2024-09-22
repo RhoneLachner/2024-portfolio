@@ -13,5 +13,5 @@ export const ICONS = {
   bandsiteLight: '/images/icons/socialIcons/music-icon-light.png',
 
   linkedinDark: '/images/icons/socialIcons/linkedin-icon-dark.png',
-  linkedinLight: '/images/icons/socialIcons/linkedin-icon-ligh.png',
+  linkedinLight: '/images/icons/socialIcons/linkedin-icon-light.png',
 };
