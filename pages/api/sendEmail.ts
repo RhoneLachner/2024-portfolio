@@ -1,3 +1,12 @@
+/**
+ * This API route handles sending emails through a POST request.
+ * - Accepts two fields in the request body: 'email' and 'message'.
+ * - Utilizes nodemailer to send emails via Gmail, with the credentials stored in environment variables.
+ * - If the email is set to 'test@example.com', the email is simulated for testing purposes.
+ * - The if statement icluding 'test@example.com' can be commented out to test real delivery to an email account. 
+ * - Returns appropriate HTTP status codes based on the request method, input validation, and email sending success/failure.
+ */
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import nodemailer from 'nodemailer';
 
@@ -11,7 +20,6 @@ export default async function sendEmail(
 
   const { email, message } = req.body;
 
-  // Comment out next three lines to test delivery to real email account
   if (email === 'test@example.com') {
     return res.status(200).json({ message: 'Test Email sent successfully!' });
   }
