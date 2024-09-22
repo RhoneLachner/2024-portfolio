@@ -1,5 +1,19 @@
-'use client';
+/**
+ * ParticleBackground Component
+ * 
+ * Renders a particle animation that responds to user interaction (mouse movement) 
+ * and animates automatically when inactive. Particles move based on a physics simulation 
+ * with adjustable parameters for behavior and appearance.
+ * 
+ * - Draws particles using the Canvas API.
+ * - Resizes automatically to fit the viewport.
+ * - Exposes a `resetParticles` function via ref to reset particle positions.
+ * 
+ * Uses `useRef`, `useImperativeHandle`, and `useEffect` hooks for handling 
+ * canvas setup, animation, and cleanup.
+ */
 
+'use client';
 import React, {
   useEffect,
   useRef,
@@ -8,11 +22,14 @@ import React, {
 } from 'react';
 import styles from './ParticleBackground.module.css';
 
-const THICKNESS = 80 ** 2;
-const SPACING = 8;
-const COLOR = 115;
-const DRAG = 1;
-const EASE = 0.15;
+// Configuration for particles
+const CONFIG = {
+  COLOR: 115,
+  DRAG: 1,
+  EASE: 0.15,
+  SPACING: 8,
+  THICKNESS: 80 ** 2,
+};
 
 interface Particle {
   vx: number;
@@ -28,8 +45,9 @@ interface ParticleBackgroundProps {}
 const ParticleBackground = forwardRef((props: ParticleBackgroundProps, ref) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
-  const particlesRef = useRef<Particle[]>([]); //reset particles ref
+  const particlesRef = useRef<Particle[]>([]); // Holds particles array
 
+  // Expose resetParticles function to the parent component
   useImperativeHandle(ref, () => ({
     resetParticles: () => {
       particlesRef.current.forEach((p) => {
@@ -42,7 +60,6 @@ const ParticleBackground = forwardRef((props: ParticleBackgroundProps, ref) => {
   }));
 
   useEffect(() => {
-    console.info('ParticleBackground rendered');
     if (typeof window === 'undefined') return;
 
     let w: number, h: number;
@@ -50,10 +67,15 @@ const ParticleBackground = forwardRef((props: ParticleBackgroundProps, ref) => {
       my = 0,
       man = false;
     let ctx: CanvasRenderingContext2D | null = null;
-    let tog = true;
+    let toggleFrame = true;
 
-    const particle: Particle = { vx: 0, vy: 0, x: 0, y: 0, ox: 0, oy: 0 };
+    // Default particle object
+    const defaultParticle: Particle = { vx: 0, vy: 0, x: 0, y: 0, ox: 0, oy: 0 };
 
+    // Current containerRef is saved in a variable to avoid stale closure issues
+    const container = containerRef.current;
+
+    // Resize canvas and reinitialize particles
     const resizeCanvas = () => {
       if (!canvasRef.current) return;
 
@@ -64,20 +86,20 @@ const ParticleBackground = forwardRef((props: ParticleBackgroundProps, ref) => {
       w = canvas.width;
       h = canvas.height;
 
-      const ROWS = Math.floor(h / SPACING);
-      const COLS = Math.floor(w / SPACING);
+      const ROWS = Math.floor(h / CONFIG.SPACING);
+      const COLS = Math.floor(w / CONFIG.SPACING);
       const NUM_PARTICLES = ROWS * COLS;
 
-      //reset particles array
       particlesRef.current = [];
       for (let i = 0; i < NUM_PARTICLES; i++) {
-        const p: Particle = { ...particle };
-        p.x = p.ox = SPACING * (i % COLS);
-        p.y = p.oy = SPACING * Math.floor(i / COLS);
+        const p: Particle = { ...defaultParticle };
+        p.x = p.ox = CONFIG.SPACING * (i % COLS);
+        p.y = p.oy = CONFIG.SPACING * Math.floor(i / COLS);
         particlesRef.current.push(p);
       }
     };
 
+    // Event listeners and Initialize Canvas
     const init = () => {
       if (!canvasRef.current) return;
 
@@ -86,70 +108,73 @@ const ParticleBackground = forwardRef((props: ParticleBackgroundProps, ref) => {
 
       resizeCanvas();
 
-      const container = containerRef.current;
-
-      container?.addEventListener('mousemove', (e) => {
+      const handleMouseMove = (e: MouseEvent) => {
         const bounds = container?.getBoundingClientRect();
         if (!bounds) return;
         mx = e.clientX - bounds.left;
         my = e.clientY - bounds.top;
-        man = true;
-      });
+        man = true; // Manually control particles
+      };
 
+      container?.addEventListener('mousemove', handleMouseMove);
       window.addEventListener('resize', resizeCanvas);
 
-      requestAnimationFrame(step);
+      requestAnimationFrame(step); // Start animation loop
     };
 
+    // Animation step, applies physics and draws particles
     const step = () => {
-      //automatically plays particle animation before cursor is detected
       if (!ctx) return;
 
-      if ((tog = !tog)) {
+      // Toggle between updating physics and rendering pixels
+      if ((toggleFrame = !toggleFrame)) {
         if (!man) {
-          const t = +new Date() * 0.001; //speed
+          const t = +new Date() * 0.001; // Time factor for auto-animation
           mx = w * 0.5 + Math.cos(t * 2.1) * Math.cos(t * 0.9) * w * 0.45;
           my =
             h * 0.5 +
             Math.sin(t * 3.2) * Math.tan(Math.sin(t * 0.8)) * h * 0.45;
         }
 
+        // Update particle physics
         for (let i = 0; i < particlesRef.current.length; i++) {
           const p = particlesRef.current[i];
           const dx = mx - p.x;
           const dy = my - p.y;
           const d = dx * dx + dy * dy;
-          const f = -THICKNESS / d;
+          const f = -CONFIG.THICKNESS / d;
 
-          if (d < THICKNESS) {
+          if (d < CONFIG.THICKNESS) {
             const t = Math.atan2(dy, dx);
             p.vx += f * Math.cos(t);
             p.vy += f * Math.sin(t);
           }
 
-          p.x += (p.vx *= DRAG) + (p.ox - p.x) * EASE;
-          p.y += (p.vy *= DRAG) + (p.oy - p.y) * EASE;
+          // Apply movement based on velocity and drag 
+          p.x += (p.vx *= CONFIG.DRAG) + (p.ox - p.x) * CONFIG.EASE;
+          p.y += (p.vy *= CONFIG.DRAG) + (p.oy - p.y) * CONFIG.EASE;
         }
       } else {
-        const a = ctx.createImageData(w, h);
-        const b = a.data;
+        // Draw particles on canvas
+        const imageData = ctx.createImageData(w, h);
+        const buffer = imageData.data;
 
         for (let i = 0; i < particlesRef.current.length; i++) {
           const p = particlesRef.current[i];
-          const n = (~~p.x + ~~p.y * w) * 4;
-          b[n] = b[n + 1] = b[n + 2] = COLOR;
-          b[n + 3] = 255;
+          const index = (~~p.x + ~~p.y * w) * 4;
+          buffer[index] = buffer[index + 1] = buffer[index + 2] = CONFIG.COLOR;
+          buffer[index + 3] = 255; 
         }
 
-        ctx.putImageData(a, 0, 0);
+        ctx.putImageData(imageData, 0, 0);
       }
 
-      requestAnimationFrame(step);
+      requestAnimationFrame(step); // Loop the animation
     };
 
     init();
-    const container = containerRef.current;
 
+    // Event listener cleanup on unmount
     return () => {
       window.removeEventListener('resize', resizeCanvas);
       container?.removeEventListener('mousemove', () => {});
@@ -157,7 +182,7 @@ const ParticleBackground = forwardRef((props: ParticleBackgroundProps, ref) => {
   }, []);
 
   return (
-    <div ref={containerRef} className={styles.container}>
+    <div ref={containerRef} className={styles.container} aria-hidden="true">
       <canvas ref={canvasRef} className={styles.canvas} />
     </div>
   );
