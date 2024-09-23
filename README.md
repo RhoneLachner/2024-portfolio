@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sarah Rhone Lachner - Developer Portfolio
 
-## Getting Started
+Welcome to my developer portfolio! This portfolio site was built using **Next.js**, **TypeScript**, and **Tailwind CSS** to showcase my work as a developer and highlight my passion for clean, responsive design. Utilizing static site generation and optimized WebP images, the site ensures fast performance and a smooth user experience.
 
-First, run the development server:
+I used a **component-based architecture**, custom hooks, and state management to create an engaging user experience, while Tailwind CSS helped streamline the design process with scalable, efficient styling. **Playwright** was implemented to perform end-to-end testing, ensuring the contact form and email functionality work seamlessly.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Feel free to reach out through **LinkedIn**, **GitHub**, my band’s website, or send me a message directly via the **contact form** on this Portfolio site. I’d love to connect!
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## **Table of Contents**
+1. [Demo](#demo)
+2. [Features](#features)
+3. [Technologies](#technologies)
+4. [License](#license)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## **Demo**
+Check out the live demo of the portfolio at:
+- [rhonelachner.com](https://rhonelachner.com)
+- [sarahrhonelachner.com](https://sarahrhonelachner.com)
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## **Features**
+- **Particle Animation Background:** Custom background animation that responds to user interactions.
+- **Dark Mode Toggle:** Switch between light and dark themes.
+- **Dynamic Modals:** Each section of the portfolio is loaded via modals (About, Projects, Contact).
+- **Fully Responsive Design:** Optimized for different screen sizes and devices.
+- **Email Functionality:** Contact form allowing visitors to send messages directly via the integrated email API.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## **Technologies**
+- **Framework:** Next.js
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS, CSS Modules
+- **Animations:** Custom Particle Animation with JavaScript and CSS
+- **Testing:** Playwright for End-to-End testing
+- **Deployment:** Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## **License**
+This project is open source and available under the [MIT License](LICENSE).
+
