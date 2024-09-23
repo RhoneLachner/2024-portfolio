@@ -3,25 +3,16 @@
   src: url('/fonts/hyperbola.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Montserrat';
   src: url('/fonts/Montserrat-Regular.ttf') format('truetype');
   font-style: normal;
+  font-display: swap;
 }
 
-@font-face {
-  font-family: 'Montserrat';
-  src: url('/fonts/Montserrat-Italic.ttf') format('truetype');
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Comfortaa';
-  src: url('/fonts/Comfortaa-Regular.ttf') format('truetype');
-  font-style: normal;
-}
 
 /* Dark mode default */
 /* Base styles */
@@ -152,7 +143,7 @@ a {
 /* Light mode */
 
 [data-theme='light'] {
-  --background-color: #ededed;
+  --background-color: #f3f3f3;
   --text-color: #000000;
 }
 

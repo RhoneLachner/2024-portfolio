@@ -24,9 +24,9 @@ import styles from './ParticleBackground.module.css';
 
 // Configuration for particles
 const CONFIG = {
-  COLOR: 115,
+  COLOR: 140,
   DRAG: 1,
-  EASE: 0.15,
+  EASE: 0.11,
   SPACING: 8,
   THICKNESS: 80 ** 2,
 };

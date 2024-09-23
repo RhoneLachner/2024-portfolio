@@ -70,6 +70,7 @@
 
 .copyLine3 {
   margin-left: 1.5rem;
+  font-weight: 475;
   @media (min-width: 768px) {
   }
 }
@@ -110,7 +111,7 @@
   margin-top: 8rem;
   font-size: 0.9rem;
   text-align: center;
-  font-weight: 550;
+  font-weight: 475;
   letter-spacing: 1.1;
 
   @media (min-width: 768px) {
@@ -181,10 +182,10 @@
 /* light mode */
 
 [data-theme='light'] .copyLine1,
-.copyLine2,
-.copyLine3,
-.copyLine4 {
-  font-weight: 530;
+[data-theme='light'] .copyLine2,
+[data-theme='light'] .copyLine3,
+[data-theme='light'] .copyLine4 {
+  font-weight: 550;
 }
 
 [data-theme='light'] .particleResetButton:hover {
@@ -194,7 +195,7 @@
 }
 
 [data-theme='light'] .copyLine5 {
-  font-weight: 550;
+  font-weight: 540;
 }
 
 [data-theme='light'] .particleResetButton {

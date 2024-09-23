@@ -21,6 +21,7 @@ test-results/
 .DS_Store
 *.pem
 .env.local
+.vscode/settings.json
 
 # debug
 npm-debug.log*
