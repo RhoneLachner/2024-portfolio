@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Sarah Rhone Lachner Dev Portfolio',
   description:
     'Development Portfolio of Sarah Rhone Lachner - Software engineer, musician, and artist with a passion for patterns, nature, and problem solving.',
-  viewport: 'width=device-width, initial-scale=1',
+  metadataBase: new URL('https://sarahrhonelachner.dev'), 
   icons: {
     icon: '/favicon.webp',
     shortcut: '/favicon.ico',
@@ -25,6 +25,7 @@ export const metadata: Metadata = {
     ],
   },
 };
+
 
 export default function Page() {
   return <HomePage />;
