@@ -6,7 +6,7 @@ interface AboutCopy {
 }
 
 export const aboutCopy: AboutCopy = {
-  bioImage: '/images/bio-image.jpg',
+  bioImage: '/images/bio-image.webp',
   bio: [
     `Hello! My name is Sarah Rhone-Ann Lachner, and I usually go by "Rhone."`,
     `I am a Software Engineer and Product Manager who is passionate about creating meaningful, human-centered technology that reflects both the natural world and our shared experience as people. I believe that technology is a reflection of ourselves, nature, and the universe, and I aim to create solutions that are not just functional, but also thoughtful and sustainable.`,
