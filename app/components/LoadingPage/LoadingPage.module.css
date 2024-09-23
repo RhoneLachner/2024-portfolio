@@ -1,1 +1,34 @@
-/*  TO-DO - still needs styling */
+.loadingPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+  background-color: var(--background-color);
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1); 
+  border-left-color: rgb(173, 173, 173); 
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin .7s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loadingMessage {
+  padding-top: 24px;
+  font-family: 'Montserrat-Regular', sans-serif;
+  letter-spacing: 3px;
+  font-size: 14px;
+  color: var(--text-color);
+}
