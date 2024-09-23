@@ -19,7 +19,7 @@ Feel free to reach out through **LinkedIn**, **GitHub**, my band’s website, or
 ## **Demo**
 Check out the live demo of the portfolio at:
 - [rhonelachner.com](https://rhonelachner.com)
-- [sarahrhonelachner.com](https://sarahrhonelachner.dev)
+- [sarahrhonelachner.dev](https://sarahrhonelachner.dev)
 
 ---
 
