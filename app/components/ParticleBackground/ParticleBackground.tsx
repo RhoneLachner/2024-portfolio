@@ -12,7 +12,6 @@
  * Uses `useRef`, `useImperativeHandle`, and `useEffect` hooks for handling 
  * canvas setup, animation, and cleanup.
  */
-
 'use client';
 import React, {
   useEffect,
@@ -28,7 +27,7 @@ const CONFIG = {
   DRAG: 1,
   EASE: 0.11,
   SPACING: 8,
-  THICKNESS: 80 ** 2,
+  THICKNESS: 80 ** 2, // Default thickness
 };
 
 interface Particle {
@@ -136,6 +135,10 @@ const ParticleBackground = forwardRef((props: ParticleBackgroundProps, ref) => {
     const step = () => {
       if (!ctx) return;
 
+      // Update thickness based on screen width
+      const currentThickness =
+        window.innerWidth <= 468 ? 50 ** 2 : CONFIG.THICKNESS;
+
       // Toggle between updating physics and rendering pixels
       if ((toggleFrame = !toggleFrame)) {
         if (!man) {
@@ -152,9 +155,9 @@ const ParticleBackground = forwardRef((props: ParticleBackgroundProps, ref) => {
           const dx = mx - p.x;
           const dy = my - p.y;
           const d = dx * dx + dy * dy;
-          const f = -CONFIG.THICKNESS / d;
+          const f = -currentThickness / d; // Use dynamic thickness here
 
-          if (d < CONFIG.THICKNESS) {
+          if (d < currentThickness) {
             const t = Math.atan2(dy, dx);
             p.vx += f * Math.cos(t);
             p.vy += f * Math.sin(t);
