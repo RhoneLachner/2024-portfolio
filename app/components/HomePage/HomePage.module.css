@@ -8,7 +8,7 @@
 
 .copyContainer {
   position: absolute;
-  padding: 22rem 1rem 4rem 1rem;
+  padding: 43vh 1rem 4rem 1rem;
   inset: 0;
   display: flex;
   flex-direction: column;
@@ -20,10 +20,6 @@
   color: var(--text-color);
   pointer-events: none;
   touch-action: none;
-
-  @media (max-height: 650px) {
-    padding: 19rem 1rem 4rem 1rem; /* Adjust padding for small screen height */
-  }
 
   @media (min-width: 768px) {
     padding: 60vh 1rem 4rem 4vw;
@@ -55,7 +51,7 @@
   font-family: 'Hyperbola', sans-serif;
   letter-spacing: 2px;
   line-height: 2.4rem;
-  font-size: 21px;
+  font-size: 20px;
 
   @media (min-width: 768px) {
     margin-left: 2.5rem;
@@ -114,19 +110,11 @@
 }
 
 .copyLine5 {
-  margin-top: 6rem;
+  margin-top: 11vh;
   font-size: 0.9rem;
   text-align: center;
   font-weight: 475;
   letter-spacing: 1.1;
-
-  @media (max-height: 650px) {
-    margin-top: 5rem;
-  }
-
-  @media (min-width: 768px) {
-    margin-top: 7rem;
-  }
 }
 
 .particleResetButtonContainer {
