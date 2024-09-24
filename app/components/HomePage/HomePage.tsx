@@ -5,6 +5,7 @@
  * It includes a particle reset button to reset the particle background.
  * Copy and button element visibility is based on modal state; not visible on small screens when modals are open.
  * A LoadingPage component is displayed while the homepage content is loading.
+ * A useEffect disables scrolling on the homepage.
  */
 
 'use client'; 
@@ -17,6 +18,9 @@ import LoadingPage from '../LoadingPage/LoadingPage';
 const HomePage: React.FC = () => {
   // State to manage loading status
   const [loading, setLoading] = useState(true);
+
+  // Ref to store scroll position before disabling scrolling
+  const scrollPosition = useRef(0); // Initialize scrollPosition using useRef
 
   // Ref to trigger particle reset
   const particleRef = useRef<{ resetParticles: () => void } | null>(null);
@@ -47,6 +51,16 @@ const HomePage: React.FC = () => {
     }
   }, []);
 
+  useEffect(() => {
+    scrollPosition.current = window.scrollY;
+
+    // Disable scroll. Scrolling on the HomePage component will need to 
+    // be re-enabled on unmount if other pages are added to this website in the future. 
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${scrollPosition.current}px`;
+    document.body.style.width = '100%';
+  }, []);
+
   // Render the loading screen while the page is still loading
   if (loading) {
     return <LoadingPage />;
@@ -54,9 +68,7 @@ const HomePage: React.FC = () => {
 
   return (
     <div className={styles.homePage}>
-      <div className={styles.particleBackgroundContainer}>
-        <ParticleBackground ref={particleRef} />
-      </div>
+      <ParticleBackground ref={particleRef} />
 
       <div
         className={`${styles.particleResetButtonContainer} ${

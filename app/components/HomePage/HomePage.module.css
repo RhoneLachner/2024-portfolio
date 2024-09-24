@@ -3,6 +3,7 @@
   height: 100%;
   z-index: -1;
   background-color: var(--background-color);
+  touch-action: none;
 }
 
 .copyContainer {
@@ -15,9 +16,10 @@
   justify-content: center;
   color: white;
   text-align: left;
-  pointer-events: none;
   z-index: 2;
   color: var(--text-color);
+  pointer-events: none;
+  touch-action: none;
 
   @media (min-width: 768px) {
     padding: 60vh 1rem 4rem 4vw;

@@ -116,7 +116,17 @@ const ParticleBackground = forwardRef((props: ParticleBackgroundProps, ref) => {
         man = true; // Manually control particles
       };
 
+      const handleTouchMove = (e: TouchEvent) => {
+        const bounds = container?.getBoundingClientRect();
+        if (!bounds) return;
+        const touch = e.touches[0]; // Get the first touch point
+        mx = touch.clientX - bounds.left;
+        my = touch.clientY - bounds.top;
+        man = true; // Manually control particles based on touch
+      };
+
       container?.addEventListener('mousemove', handleMouseMove);
+      container?.addEventListener('touchmove', handleTouchMove); // Add touchmove listener
       window.addEventListener('resize', resizeCanvas);
 
       requestAnimationFrame(step); // Start animation loop
