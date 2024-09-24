@@ -111,11 +111,10 @@ a {
 .socialIconsContainer {
   display: flex;
   justify-content: center;
-  margin-top: 60px;
+  margin-top: 3vh;
 
   @media (min-width: 768px) {
     height: 5.2rem;
-    margin-top: 60px;
   }
 }
 

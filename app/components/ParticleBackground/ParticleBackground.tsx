@@ -23,7 +23,7 @@ import styles from './ParticleBackground.module.css';
 
 // Configuration for particles
 const CONFIG = {
-  COLOR: 125,
+  COLOR: 120,
   DRAG: 1,
   EASE: 0.11,
   SPACING: 8,

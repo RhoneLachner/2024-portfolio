@@ -8,15 +8,14 @@
   border-radius: 25px;
   max-width: 360px;
   justify-self: center;
-  margin-top: 4rem;
+  margin-top: 5.5vh;
 
   @media (min-width: 768px) {
     padding: 2rem 1.4rem;
     margin-left: 3rem auto;
     margin-right: 3rem auto;
     max-width: 380px;
-    /* border-radius: 40px; */
-    margin-top: 4rem;
+    margin-top: 7.5vh;
   }
 
   @media (min-width: 1200px) {
