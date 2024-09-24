@@ -23,7 +23,7 @@ import styles from './ParticleBackground.module.css';
 
 // Configuration for particles
 const CONFIG = {
-  COLOR: 140,
+  COLOR: 125,
   DRAG: 1,
   EASE: 0.11,
   SPACING: 8,
@@ -137,7 +137,7 @@ const ParticleBackground = forwardRef((props: ParticleBackgroundProps, ref) => {
 
       // Update thickness based on screen width
       const currentThickness =
-        window.innerWidth <= 468 ? 50 ** 2 : CONFIG.THICKNESS;
+        window.innerWidth <= 468 ? 40 ** 2 : CONFIG.THICKNESS;
 
       // Toggle between updating physics and rendering pixels
       if ((toggleFrame = !toggleFrame)) {
