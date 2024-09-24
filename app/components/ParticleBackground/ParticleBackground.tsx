@@ -137,7 +137,7 @@ const ParticleBackground = forwardRef((props: ParticleBackgroundProps, ref) => {
 
       // Update thickness based on screen width
       const currentThickness =
-        window.innerWidth <= 460 ? 32 ** 2 : CONFIG.THICKNESS;
+        window.innerWidth <= 460 ? 36 ** 2 : CONFIG.THICKNESS;
 
       // Toggle between updating physics and rendering pixels
       if ((toggleFrame = !toggleFrame)) {
