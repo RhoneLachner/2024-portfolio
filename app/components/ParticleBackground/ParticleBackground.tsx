@@ -25,9 +25,9 @@ import styles from './ParticleBackground.module.css';
 const CONFIG = {
   COLOR: 110,
   DRAG: 1,
-  EASE: 0.11,
+  EASE: 0.05,
   SPACING: 8,
-  THICKNESS: 80 ** 2, // Default thickness
+  THICKNESS: 85 ** 2, // Default thickness
 };
 
 interface Particle {
