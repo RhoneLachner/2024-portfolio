@@ -111,3 +111,19 @@
   padding-top: 0;
   font-weight: 500;
 }
+
+.noHoverEffect {
+  font-weight: 480;
+  letter-spacing: 1.7px;
+  font-size: 13px;
+  margin-top: -0.4rem;
+  margin-bottom: 1px;
+  line-height: 18px;
+  font-family: 'Montserrat-Regular', sans-serif;
+  cursor: default; /* Prevents pointer cursor */
+}
+
+.noHoverEffect:hover {
+  color: inherit; /* Prevent color change on hover */
+  cursor: default; /* Ensure the pointer does not change */
+}

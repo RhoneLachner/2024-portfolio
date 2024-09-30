@@ -17,8 +17,21 @@ export const projectsCopy: ProjectsCopy[] = [
       I used a component-based architecture, custom hooks, and state management to create an engaging user experience, while Tailwind CSS helped streamline the design process with scalable, efficient styling. Playwright was implemented to perform end-to-end testing, ensuring the contact form and email functionality work seamlessly. 
       I invite you to explore my projects, and the source code is available on GitHub for those interested in a closer look!
     `,
-    url: 'https://github.com/RhoneLachner/2024-portfolio',
+    url: '',
     githubUrl: 'https://github.com/RhoneLachner/2024-portfolio',
+  },
+  {
+    title: 'CommitWizard CLI',
+    githubCopy: 'GitHub',
+    description: `
+CommitWizard CLI is a command-line tool that helps developers write consistent and structured Git commit messages by interactively selecting a commit category before writing the message. This ensures best practices are followed and makes it easier to maintain a clean and organized commit history. 
+Features include interactive commit prompts, structured commit messages, and customizable categories. 
+CommitWizard CLI has been published on npm and can be installed globally with the following command:
+npm install -g commitwizard-cli
+Contributions are welcome! Feel free to open an issue or submit a pull request on GitHub.
+`,
+    url: '',
+    githubUrl: 'https://github.com/RhoneLachner/CommitWizard-CLI',
   },
   {
     title: 'Work in Progress: Contingency Compass App',
@@ -26,7 +39,7 @@ export const projectsCopy: ProjectsCopy[] = [
     description: `
       A full-stack web application designed to provide critical information and resources during natural disasters. It features real-time updates, location-based data, and resource mapping.  The frontend is built with React, HTML, CSS, and JavaScript, while the backend utilizes Django and Django REST Framework. APIs include FEMA, OpenWeatherMap, and Google Maps to ensure reliable, up-to-date data.
     `,
-    url: 'https://github.com/RhoneLachner/contingency-compass-app',
+    url: '',
     githubUrl: 'https://github.com/RhoneLachner/contingency-compass-app',
   },
   {
@@ -78,6 +91,10 @@ export const projectsImages: { [key: string]: string[] } = {
     '/images/projectImages/portfolio-image6.webp',
     '/images/projectImages/portfolio-image7.webp',
     '/images/projectImages/portfolio-image8.webp',
+  ],
+  'CommitWizard CLI': [
+'/images/projectImages/commitwizard-image2.webp',
+'/images/projectImages/commitwizard-image1.webp',
   ],
   'Work in Progress: Contingency Compass App': [
     '/images/projectImages/compassapp-image1.webp',

@@ -35,14 +35,10 @@ const ProjectsModal: React.FC<ProjectsModalProps> = ({ isOpen, onClose }) => {
               <ImageCarousel projectTitle={project.title} />
 
               <div className={styles.carouselTextContainer}>
-                <a
-                  className={styles.carouselTitleLink}
-                  href={project.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div className={styles.carouselTitle}>
-                    {/* Special handling for specific project titles */}
+                {project.title === 'Dev Portfolio' ||
+                project.title === 'CommitWizard CLI' ||
+                project.title === 'Work in Progress: Contingency Compass App' ? (
+                  <div className={`${styles.noHoverEffect}`}>
                     {project.title ===
                     'Work in Progress: Contingency Compass App' ? (
                       <>
@@ -53,21 +49,27 @@ const ProjectsModal: React.FC<ProjectsModalProps> = ({ isOpen, onClose }) => {
                       project.title
                     )}
                   </div>
-                </a>
-
-                {/* Exclude GitHub link for 'Dev Portfolio' and 'Work in Progress: Contingency Compass App'. */}
-                {project.title !== 'Dev Portfolio' &&
-                project.title !==
-                  'Work in Progress: Contingency Compass App' ? (
+                ) : (
                   <a
-                    className={styles.carouselGithubLink}
-                    href={project.githubUrl}
+                    className={styles.carouselTitleLink}
+                    href={project.url}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    {project.githubCopy}
+                    <div className={styles.carouselTitle}>
+                      {project.title}
+                    </div>
                   </a>
-                ) : null}
+                )}
+
+                <a
+                  className={styles.carouselGithubLink}
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {project.githubCopy}
+                </a>
 
                 <div className={styles.carouselDescription}>
                   {project.description.split('\n').map((paragraph, index) => (
