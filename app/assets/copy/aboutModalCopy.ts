@@ -13,6 +13,6 @@ export const aboutCopy: AboutCopy = {
     `With a love for puzzles, pattern recognition, and problem-solving, I've found myself diving into many different fields throughout my life—from biology and human health to music production and sound engineering. I see patterns and structure in everything around me, and this perspective has fueled my passion for both art and technology. When I’m not at a keyboard, I enjoy crafting, cooking, wildcrafting medicinal herbs, playing music, and connecting with friends.`,
     `As a Software Engineer, I thrive on clean code, web accessibility, and turning complex challenges into structured solutions. My Product Management experience has strengthened my ability to lead and collaborate, giving me a well-rounded understanding of process and communication across teams. I love working on projects that push me to think outside the box, and I find joy in bringing clarity to complex systems.`,
     `Whether through engineering or product management, my goal is to build technology that makes the world a better place for both the people living in it today and future generations. I’m always excited to collaborate with companies that value people, creativity, and sustainability.`,
-    `Feel free to reach out through LinkedIn, GitHub, or my band’s website, or send me a message directly. I’d love to connect!`,
+    `Feel free to reach out through LinkedIn, GitHub, my band’s website, or send me a message directly. I’d love to connect!`,
   ],
 };
