@@ -36,7 +36,6 @@ const ProjectsModal: React.FC<ProjectsModalProps> = ({ isOpen, onClose }) => {
 
               <div className={styles.carouselTextContainer}>
                 {project.title === 'Dev Portfolio' ||
-                project.title === 'CommitWizard CLI' ||
                 project.title === 'Work in Progress: Contingency Compass App' ? (
                   <div className={`${styles.noHoverEffect}`}>
                     {project.title ===

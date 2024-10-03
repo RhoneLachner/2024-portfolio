@@ -30,7 +30,7 @@ CommitWizard CLI has been published on npm and can be installed globally with th
 npm install -g commitwizard-cli
 Contributions are welcome! Feel free to open an issue or submit a pull request on GitHub.
 `,
-    url: '',
+    url: 'https://www.npmjs.com/package/commitwizard-cli',
     githubUrl: 'https://github.com/RhoneLachner/CommitWizard-CLI',
   },
   {
