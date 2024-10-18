@@ -1,15 +1,15 @@
 /**
  * ParticleBackground Component
- * 
- * Renders a particle animation that responds to user interaction (mouse movement) 
- * and animates automatically when inactive. Particles move based on a physics simulation 
+ *
+ * Renders a particle animation that responds to user interaction (mouse movement)
+ * and animates automatically when inactive. Particles move based on a physics simulation
  * with adjustable parameters for behavior and appearance.
- * 
+ *
  * - Draws particles using the Canvas API.
  * - Resizes automatically to fit the viewport.
  * - Exposes a `resetParticles` function via ref to reset particle positions.
- * 
- * Uses `useRef`, `useImperativeHandle`, and `useEffect` hooks for handling 
+ *
+ * Uses `useRef`, `useImperativeHandle`, and `useEffect` hooks for handling
  * canvas setup, animation, and cleanup.
  */
 'use client';
@@ -25,7 +25,7 @@ import styles from './ParticleBackground.module.css';
 const CONFIG = {
   COLOR: 110,
   DRAG: 1,
-  EASE: 0.05,
+  EASE: 0.07,
   SPACING: 8,
   THICKNESS: 85 ** 2, // Default thickness
 };
@@ -69,7 +69,14 @@ const ParticleBackground = forwardRef((props: ParticleBackgroundProps, ref) => {
     let toggleFrame = true;
 
     // Default particle object
-    const defaultParticle: Particle = { vx: 0, vy: 0, x: 0, y: 0, ox: 0, oy: 0 };
+    const defaultParticle: Particle = {
+      vx: 0,
+      vy: 0,
+      x: 0,
+      y: 0,
+      ox: 0,
+      oy: 0,
+    };
 
     // Current containerRef is saved in a variable to avoid stale closure issues
     const container = containerRef.current;
@@ -135,9 +142,10 @@ const ParticleBackground = forwardRef((props: ParticleBackgroundProps, ref) => {
     const step = () => {
       if (!ctx) return;
 
-      // Update thickness based on screen width
+      // Update thickness and ease based on screen width
       const currentThickness =
-        window.innerWidth <= 460 ? 36 ** 2 : CONFIG.THICKNESS;
+        window.innerWidth <= 460 ? 38 ** 2 : CONFIG.THICKNESS;
+      const currentEase = window.innerWidth <= 460 ? 0.09 : CONFIG.EASE;
 
       // Toggle between updating physics and rendering pixels
       if ((toggleFrame = !toggleFrame)) {
@@ -163,9 +171,9 @@ const ParticleBackground = forwardRef((props: ParticleBackgroundProps, ref) => {
             p.vy += f * Math.sin(t);
           }
 
-          // Apply movement based on velocity and drag 
-          p.x += (p.vx *= CONFIG.DRAG) + (p.ox - p.x) * CONFIG.EASE;
-          p.y += (p.vy *= CONFIG.DRAG) + (p.oy - p.y) * CONFIG.EASE;
+          // Apply movement based on velocity, drag, and dynamic ease
+          p.x += (p.vx *= CONFIG.DRAG) + (p.ox - p.x) * currentEase;
+          p.y += (p.vy *= CONFIG.DRAG) + (p.oy - p.y) * currentEase;
         }
       } else {
         // Draw particles on canvas
@@ -176,7 +184,7 @@ const ParticleBackground = forwardRef((props: ParticleBackgroundProps, ref) => {
           const p = particlesRef.current[i];
           const index = (~~p.x + ~~p.y * w) * 4;
           buffer[index] = buffer[index + 1] = buffer[index + 2] = CONFIG.COLOR;
-          buffer[index + 3] = 255; 
+          buffer[index + 3] = 255;
         }
 
         ctx.putImageData(imageData, 0, 0);
