@@ -25,7 +25,7 @@ import styles from './ParticleBackground.module.css';
 const CONFIG = {
   COLOR: 110,
   DRAG: 1,
-  EASE: 0.07,
+  EASE: 0.07, // Default ease
   SPACING: 8,
   THICKNESS: 85 ** 2, // Default thickness
 };
