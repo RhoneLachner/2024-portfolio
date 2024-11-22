@@ -61,24 +61,6 @@ Contributions are welcome! Feel free to open an issue or submit a pull request o
     url: 'https://mystechal-divinators.github.io/project-week-tarot-divinators/index.html',
     githubUrl: 'https://github.com/Mystechal-Divinators',
   },
-  {
-    title: 'Flourish Plant Care App',
-    githubCopy: 'GitHub',
-    description: `
-      Flourish is a full-stack React app with a GraphQL backend and integrated plant recognition APIs. Users can upload plant images or search by name to access personalized care instructions. Authentication features allow users to save plants and create notes for each one.
-    `,
-    url: 'https://flourish-pro.netlify.app/',
-    githubUrl: 'https://github.com/FlourishTeam',
-  },
-  {
-    title: 'Karaoke Roulette App',
-    githubCopy: 'GitHub',
-    description: `
-      Karaoke Roulette is a fun React app that uses the YouTube API to randomly select karaoke tracks.  Built with JavaScript, Node.js, PostgreSQL, and deployed on Heroku and Netlify, this app provides a randomized karaoke experience, perfect for group gatherings.
-    `,
-    url: 'https://karaoke-roulette.netlify.app/',
-    githubUrl: 'https://github.com/Karaoke-Roulette',
-  },
 ];
 
 export const projectsImages: { [key: string]: string[] } = {
@@ -111,6 +93,4 @@ export const projectsImages: { [key: string]: string[] } = {
     '/images/projectImages/tarot-image2.webp',
     '/images/projectImages/tarot-image3.webp',
   ],
-  'Flourish Plant Care App': ['/images/projectImages/flourish-image1.webp'],
-  'Karaoke Roulette App': ['/images/projectImages/karaoke-image1.webp'],
 };
