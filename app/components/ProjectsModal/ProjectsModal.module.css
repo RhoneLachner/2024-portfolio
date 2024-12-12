@@ -41,10 +41,10 @@
 }
 
 .carouselTitle {
-  font-weight: 480;
+  font-weight: 350;
   letter-spacing: 1.7px;
   font-size: 13.5px;
-  margin-top: -0.4rem;
+  margin-top: -0.35rem;
   margin-bottom: 1px;
   line-height: 18px;
   font-family: 'Montserrat-Regular', sans-serif;
@@ -91,10 +91,10 @@
 }
 
 .noHoverProjectTitles {
-  font-weight: 480;
+  font-weight: 350;
   letter-spacing: 1.7px;
   font-size: 13.5px;
-  margin-top: -0.4rem;
+  margin-top: -0.35rem;
   margin-bottom: 1px;
   line-height: 18px;
   font-family: 'Montserrat-Regular', sans-serif;
