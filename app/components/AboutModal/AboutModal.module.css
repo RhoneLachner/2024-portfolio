@@ -2,14 +2,14 @@
   display: block;
   justify-self: center;
   margin: 20px auto 0 auto;
-  height: 13.1rem;
-  width: 17.6rem;
+  height: 13.2rem;
+  width: 17.2rem;
   border-radius: 50%;
   overflow: hidden;
 
   @media (min-width: 768px) {
-    height: calc(13.1rem * 1.05);
-    width: calc(17.6rem * 1.05);
+    height: calc(13.2rem * 1.04);
+    width: calc(17.2rem * 1.04);
   }
 }
 
