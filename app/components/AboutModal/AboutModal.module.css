@@ -2,15 +2,14 @@
   display: block;
   justify-self: center;
   margin: 20px auto 0 auto;
-  width: 16.8rem;
-  height: 12rem;
-  max-width: 80%;
+  height: 13.1rem;
+  width: 17.6rem;
   border-radius: 50%;
   overflow: hidden;
 
   @media (min-width: 768px) {
-    width: calc(16.8rem * 1.05);
-    height: calc(12rem * 1.05);
+    height: calc(13.1rem * 1.05);
+    width: calc(17.6rem * 1.05);
   }
 }
 
@@ -25,7 +24,7 @@
 }
 
 .bioCopy {
-  margin: 40px auto;
+  margin:30px auto;
   font-size: 11.2px;
   line-height: 1.75;
   max-width: 300px;
