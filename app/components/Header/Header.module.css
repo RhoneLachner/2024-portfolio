@@ -20,11 +20,10 @@
 .nav {
   display: flex;
   gap: 2rem;
-  margin-right: 1.6rem;
+  padding-right: 2rem;
 
   @media (min-width: 768px) {
     gap: 2.5rem;
-    margin-right: 2rem;
   }
   @media (min-width: 900px) {
     gap: 3rem;
@@ -43,12 +42,26 @@
   letter-spacing: 2.9px;
   font-size: 12.5px;
   font-weight: 420;
+  overflow: hidden; 
 
   @media (min-width: 768px) {
     font-weight: 450;
   }
 }
 
+/* Button underline transition */
+.headerModalButton::after {
+  content: '';
+  position: absolute;
+  width: 0%; 
+  height: 2px;
+  background-color: currentColor;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease-in-out; 
+}
+
+/* button underline */
 .headerModalButton:hover::after,
 .headerModalButton.active::after {
   content: '';
@@ -63,7 +76,7 @@
 /* Light mode  */
 [data-theme='light'] .header {
   background-color: white; /* Change the background to white in light mode */
-  color: black; /* Change the text color to black */
+  color: black; 
 }
 
 [data-theme='light'] .headerModalButton:hover::after,
