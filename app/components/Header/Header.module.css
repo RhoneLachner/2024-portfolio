@@ -20,10 +20,11 @@
 .nav {
   display: flex;
   gap: 2rem;
-  margin-right: 2.5rem;
+  margin-right: 1.6rem;
 
   @media (min-width: 768px) {
     gap: 2.5rem;
+    margin-right: 2rem;
   }
   @media (min-width: 900px) {
     gap: 3rem;
@@ -38,14 +39,12 @@
   cursor: pointer;
   padding: 0.5rem 0;
   position: relative;
-  font-size: 0.9rem;
   font-family: inherit;
   letter-spacing: 2.9px;
-  font-size: 13px;
+  font-size: 12.5px;
   font-weight: 420;
 
   @media (min-width: 768px) {
-    font-size: 12.5px;
     font-weight: 450;
   }
 }
