@@ -1,8 +1,8 @@
 /**
  * ProjectsModal Component
  *
- * This component renders a modal displaying several projects, each with its own carousel of images and project description.
- * It includes project titles and descriptions from public/copy/projectsCopy, and external links to live projects and GitHub repositories.
+ * This component renders a modal displaying several projects, each with its own title, description, and carousel of images.
+ * Titles, descriptions, and external links are located in public/copy/projectsCopy.
  * The modal is rendered conditionally based on the `isOpen` prop.
  */
 
@@ -35,9 +35,11 @@ const ProjectsModal: React.FC<ProjectsModalProps> = ({ isOpen, onClose }) => {
               <ImageCarousel projectTitle={project.title} />
 
               <div className={styles.carouselTextContainer}>
+                {/* conditionally apply noHoverProjectTitles classname */}
                 {project.title === 'Dev Portfolio' ||
-                project.title === 'Work in Progress: Contingency Compass App' ? (
-                  <div className={`${styles.noHoverEffect}`}>
+                project.title ===
+                  'Work in Progress: Contingency Compass App' ? (
+                  <div className={`${styles.noHoverProjectTitles}`}>
                     {project.title ===
                     'Work in Progress: Contingency Compass App' ? (
                       <>
@@ -55,21 +57,35 @@ const ProjectsModal: React.FC<ProjectsModalProps> = ({ isOpen, onClose }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <div className={styles.carouselTitle}>
-                      {project.title}
-                    </div>
+                    <div className={styles.carouselTitle}>{project.title}</div>
                   </a>
                 )}
+                {/* Conditionally render website link */}
+                {project.url &&
+                  project.title !== 'Dev Portfolio' &&
+                  project.title !==
+                    'Work in Progress: Contingency Compass App' && (
+                    <span>
+                      <a
+                        className={styles.carouselLink}
+                        href={project.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {project.websiteCopy}
+                      </a>
+                      {`\n`}|{`\n`}
+                    </span>
+                  )}
 
                 <a
-                  className={styles.carouselGithubLink}
+                  className={styles.carouselLink}
                   href={project.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   {project.githubCopy}
                 </a>
-
                 <div className={styles.carouselDescription}>
                   {project.description.split('\n').map((paragraph, index) => (
                     <p className={styles.carouselParagraph} key={index}>

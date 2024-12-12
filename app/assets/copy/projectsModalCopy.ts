@@ -6,11 +6,13 @@ interface ProjectsCopy {
   url: string;
   githubUrl: string;
   githubCopy: string;
+  websiteCopy: string;
 }
 
 export const projectsCopy: ProjectsCopy[] = [
   {
     title: 'Dev Portfolio',
+    websiteCopy: 'Website',
     githubCopy: 'GitHub',
     description: `
       This portfolio site was built using Next.js, TypeScript, and Tailwind CSS to showcase my work as a developer and highlight my passion for clean, responsive design. Utilizing static site generation and optimized WebP images, the site ensures fast performance and a smooth user experience.
@@ -22,6 +24,7 @@ export const projectsCopy: ProjectsCopy[] = [
   },
   {
     title: 'CommitWizard CLI',
+    websiteCopy: 'Website',
     githubCopy: 'GitHub',
     description: `
 CommitWizard CLI is a command-line tool that helps developers write consistent and structured Git commit messages by interactively selecting a commit category before writing the message. This ensures best practices are followed and makes it easier to maintain a clean and organized commit history. 
@@ -35,6 +38,7 @@ Contributions are welcome! Feel free to open an issue or submit a pull request o
   },
   {
     title: 'Work in Progress: Contingency Compass App',
+    websiteCopy: 'Website',
     githubCopy: 'GitHub',
     description: `
       A full-stack web application designed to provide critical information and resources during natural disasters. It features real-time updates, location-based data, and resource mapping.  The frontend is built with React, HTML, CSS, and JavaScript, while the backend utilizes Django and Django REST Framework. APIs include FEMA, OpenWeatherMap, and Google Maps to ensure reliable, up-to-date data.
@@ -44,6 +48,7 @@ Contributions are welcome! Feel free to open an issue or submit a pull request o
   },
   {
     title: 'beHuman VS Code Extension',
+    websiteCopy: 'Website',
     githubCopy: 'GitHub',
     description: `
       A VS Code extension developed in 7 days that encourages developers to take breaks with customizable intervals. 
@@ -54,6 +59,7 @@ Contributions are welcome! Feel free to open an issue or submit a pull request o
   },
   {
     title: 'Major Arcana Divinator App',
+    websiteCopy: 'Website',
     githubCopy: 'GitHub',
     description: `
       This Tarot reading app allows users to draw one or three cards from the Major Arcana for a personalized reading. Built with Vanilla JavaScript, HTML, and CSS, the app stores past readings in the browser using local storage, and data for each card was translated from my favorite old book on Tarot interpretation.
@@ -75,8 +81,8 @@ export const projectsImages: { [key: string]: string[] } = {
     '/images/projectImages/portfolio-image8.webp',
   ],
   'CommitWizard CLI': [
-'/images/projectImages/commitwizard-image2.webp',
-'/images/projectImages/commitwizard-image1.webp',
+    '/images/projectImages/commitwizard-image2.webp',
+    '/images/projectImages/commitwizard-image1.webp',
   ],
   'Work in Progress: Contingency Compass App': [
     '/images/projectImages/compassapp-image1.webp',

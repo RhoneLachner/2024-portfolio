@@ -43,7 +43,7 @@
 .carouselTitle {
   font-weight: 480;
   letter-spacing: 1.7px;
-  font-size: 13px;
+  font-size: 13.5px;
   margin-top: -0.4rem;
   margin-bottom: 1px;
   line-height: 18px;
@@ -55,17 +55,17 @@
   color: rgb(156, 156, 156);
 }
 
-.carouselGithubLink {
+.carouselLink {
   font-weight: 300;
   letter-spacing: 1px;
-  font-size: 12px;
+  font-size: 11px;
   line-height: 8px;
   margin-top: 0;
   font-family: 'Montserrat-Regular', sans-serif;
   cursor: pointer;
 }
 
-.carouselGithubLink:hover {
+.carouselLink:hover {
   color: rgb(156, 156, 156);
 }
 
@@ -90,10 +90,10 @@
   margin: 0;
 }
 
-.noHoverEffect {
+.noHoverProjectTitles {
   font-weight: 480;
   letter-spacing: 1.7px;
-  font-size: 13px;
+  font-size: 13.5px;
   margin-top: -0.4rem;
   margin-bottom: 1px;
   line-height: 18px;
@@ -101,7 +101,7 @@
   cursor: default;
 }
 
-.noHoverEffect:hover {
+.noHoverProjectTitles:hover {
   color: inherit;
   cursor: default;
 }
