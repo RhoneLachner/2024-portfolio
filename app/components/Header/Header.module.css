@@ -40,12 +40,16 @@
   position: relative;
   font-family: inherit;
   letter-spacing: 2.9px;
-  font-size: 12.5px;
+  font-size: 12.6px;
   font-weight: 420;
   overflow: hidden; 
 
   @media (min-width: 768px) {
     font-weight: 450;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 12.8px;
   }
 }
 
