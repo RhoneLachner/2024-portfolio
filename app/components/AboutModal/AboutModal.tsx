@@ -35,7 +35,13 @@ const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
         </div>
 
         <div className={styles.bioCopy}>
-          {aboutCopy.bio.map((paragraph, index) => (
+          <p className={styles.bioParagraph}>
+            {/* render the first paragraph in aboutCopy.bio with prefix appended to the beginning */}
+            <span className={styles.highlight}>{aboutCopy.prefix}</span>
+            {aboutCopy.bio[0]}
+          </p>
+          {/* render the second paragraph in aboutCopy.bio */}
+          {aboutCopy.bio.slice(1).map((paragraph, index) => (
             <p className={styles.bioParagraph} key={index}>
               {paragraph}
             </p>

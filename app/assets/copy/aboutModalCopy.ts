@@ -3,12 +3,14 @@
 interface AboutCopy {
   bioImage: string;
   bio: string[];
+  prefix: string[];
 }
 
 export const aboutCopy: AboutCopy = {
   bioImage: '/images/bio-image.webp',
+  prefix: [`Hello!`],
   bio: [
-    `Hello! My name is Sarah-Rhone Lachner, and I usually go by Rhone
+    `My name is Sarah-Rhone Lachner, and I usually go by Rhone
     (pronounced like "phone").`,
     `I'm a web developer who is passionate about creating meaningful, human-centered technology that reflects the natural world and our shared experience as people. I believe that technology is a reflection of ourselves, nature, and the universe, and I aim to create thoughtful solutions that are functional, practical, efficient, and sustainable.`,
     `With a love for puzzles, pattern recognition, and problem-solving, I've found myself diving into many different fields throughout my life—from biology and human health to music production and sound engineering. I see patterns and structure in everything around me, and this perspective has fueled my passion for both art and technology. When I’m not at a keyboard, I enjoy crafting, cooking, wildcrafting medicinal herbs, playing music, learning new skills, building things with my hands, spending time in nature, and connecting with friends.`,
