@@ -41,7 +41,7 @@
 }
 
 .carouselTitle {
-  font-weight: 350;
+  font-weight: 400;
   letter-spacing: 1.7px;
   font-size: 13.5px;
   margin-top: -0.35rem;
@@ -56,7 +56,7 @@
 }
 
 .noHoverProjectTitles {
-  font-weight: 350;
+  font-weight: 400;
   letter-spacing: 1.7px;
   font-size: 13.5px;
   margin-top: -0.35rem;
@@ -113,7 +113,7 @@
 }
 
 [data-theme='light'] .carouselTitle, .noHoverProjectTitles {
-  font-weight: 400;
+  font-weight: 450;
 }
 
 [data-theme='light'] .carouselTitleLink:hover {
