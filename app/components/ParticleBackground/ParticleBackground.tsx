@@ -23,7 +23,7 @@ import styles from './ParticleBackground.module.css';
 
 // Configuration for particles
 const CONFIG = {
-  COLOR: 106,
+  COLOR: 107,
   DRAG: 1,
   EASE: 0.07, // Default ease
   SPACING: 8,
