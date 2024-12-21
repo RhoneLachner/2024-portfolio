@@ -106,7 +106,6 @@
   margin: 0;
 }
 
-
 /* light theme */
 
 [data-theme='light'] .carouselDescription {
@@ -117,11 +116,11 @@
   font-weight: 400;
 }
 
-[data-theme='light'] .carouselTitle, .noHoverProjectTitles {
+[data-theme='light'] .carouselTitle,
+[data-theme='light'] .noHoverProjectTitles {
   font-weight: 550;
 }
 
 [data-theme='light'] .carouselTitleLink:hover {
   color: rgb(178, 178, 178);
 }
-
