@@ -10,7 +10,6 @@
     "postinstall": "tailwindcss build"
   },
   "dependencies": {
-    "@vercel/speed-insights": "^1.2.0",
     "autoprefixer": "^10.x",
     "next": "^15.3.0",
     "node-mocks-http": "^1.16.0",
