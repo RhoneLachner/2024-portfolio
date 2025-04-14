@@ -1,8 +1,8 @@
 # Sarah Rhone Lachner - Developer Portfolio
 
-Welcome to my developer portfolio! This portfolio site was built using **Next.js**, **TypeScript**, and **Tailwind CSS** to showcase my work as a developer and highlight my passion for clean, responsive design. Utilizing static site generation and optimized WebP images, the site ensures fast performance and a smooth user experience.
+Welcome to my developer portfolio! This site was built with **Next.js**, **TypeScript**, and **Tailwind CSS** to showcase my development work and passion for clean, responsive design. It leverages **static site generation** and **optimized WebP images** to ensure fast load times and a smooth user experience.
 
-I used a **component-based architecture**, custom hooks, and state management to create an engaging user experience, while Tailwind CSS helped streamline the design process with scalable, efficient styling. **Playwright** was implemented to perform end-to-end testing, ensuring the contact form and email functionality work seamlessly.
+The architecture is **component-based**, with custom hooks and state management to keep the interface efficient and interactive. Tailwind CSS provided a streamlined approach to styling, making it easy to maintain consistency and scalability across the design. I also implemented **Playwright** for end-to-end testing to ensure the contact form and email functionality work reliably.
 
 Feel free to reach out through **LinkedIn**, **GitHub**, my band’s website, or send me a message directly via the **contact form** on this Portfolio site. I’d love to connect!
 
