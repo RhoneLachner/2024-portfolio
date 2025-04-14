@@ -6,12 +6,12 @@ export const ICONS = {
   closeBlack: '/images/icons/close-icon-black.webp',
   closeWhite: '/images/icons/close-icon-white.webp',
 
-  githubDark: '/images/icons/socialIcons/github-icon-dark.webp',
-  githubLight: '/images/icons/socialIcons/github-icon-light.webp',
+  githubDark: '/images/icons/socialIcons/github-icon-dark-lossy90.webp',
+  githubLight: '/images/icons/socialIcons/github-icon-light-lossy90.webp',
 
-  bandsiteDark: '/images/icons/socialIcons/music-icon-dark.webp',
-  bandsiteLight: '/images/icons/socialIcons/music-icon-light.webp',
+  bandsiteDark: '/images/icons/socialIcons/music-icon-dark-lossy90.webp',
+  bandsiteLight: '/images/icons/socialIcons/music-icon-light-lossy90.webp',
 
-  linkedinDark: '/images/icons/socialIcons/linkedin-icon-dark.webp',
-  linkedinLight: '/images/icons/socialIcons/linkedin-icon-light.webp',
+  linkedinDark: '/images/icons/socialIcons/linkedin-icon-dark-lossy90.webp',
+  linkedinLight: '/images/icons/socialIcons/linkedin-icon-light-lossy90.webp',
 };
