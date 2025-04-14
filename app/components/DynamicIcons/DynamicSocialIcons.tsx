@@ -8,8 +8,8 @@
 
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import { ICONS } from '../../assets/icons'; 
-import { socialLinkCopy } from '../../assets/socialLinks'; 
+import { ICONS } from '../../assets/icons';
+import { socialLinkCopy } from '../../assets/socialLinks';
 
 const socialLinks = {
   github: {
@@ -65,9 +65,10 @@ const DynamicSocialIcons: React.FC = () => {
           alt="LinkedIn Icon"
           width={48}
           height={48}
+          unoptimized
         />
       </a>
-  
+
       <a href={socialLinkCopy.github} target="_blank" rel="noopener noreferrer">
         <Image
           className="socialIconImage"
@@ -75,9 +76,10 @@ const DynamicSocialIcons: React.FC = () => {
           alt="GitHub Icon"
           width={48}
           height={48}
+          unoptimized
         />
       </a>
-   
+
       <a
         href={socialLinkCopy.bandsite}
         target="_blank"
@@ -89,6 +91,7 @@ const DynamicSocialIcons: React.FC = () => {
           alt="Music Icon"
           width={48}
           height={48}
+          unoptimized
         />
       </a>
     </div>

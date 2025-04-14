@@ -12,7 +12,7 @@ import { ICONS } from '../../assets/icons';
 
 interface CloseButtonProps {
   // Function to handle the close action
-  onClose: () => void; 
+  onClose: () => void;
 }
 
 const DynamicCloseButton: React.FC<CloseButtonProps> = ({ onClose }) => {
@@ -22,7 +22,7 @@ const DynamicCloseButton: React.FC<CloseButtonProps> = ({ onClose }) => {
   useEffect(() => {
     const getCurrentTheme = () =>
       document.documentElement.getAttribute('data-theme');
-    
+
     // Set initial theme when the component mounts
     setTheme(getCurrentTheme());
 
@@ -33,8 +33,8 @@ const DynamicCloseButton: React.FC<CloseButtonProps> = ({ onClose }) => {
 
     // Observe the document for theme changes
     observer.observe(document.documentElement, {
-      attributes: true, 
-      attributeFilter: ['data-theme'], 
+      attributes: true,
+      attributeFilter: ['data-theme'],
     });
 
     // Cleanup the observer when the component unmounts
@@ -46,7 +46,7 @@ const DynamicCloseButton: React.FC<CloseButtonProps> = ({ onClose }) => {
 
   return (
     <button onClick={onClose} className="closeButton">
-      <Image src={closeIcon} alt="Close Icon" width={18} height={18} />
+      <Image src={closeIcon} alt="Close Icon" width={18} height={18} quality={90} />
     </button>
   );
 };
