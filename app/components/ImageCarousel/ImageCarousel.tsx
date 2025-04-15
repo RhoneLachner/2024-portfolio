@@ -64,7 +64,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ projectTitle }) => {
           width={200}
           height={100}
           className={styles.carouselImage}
-          unoptimized
+          quality={100}
         />
 
         {/* Display the next button only if there are more images to navigate forward to */}
