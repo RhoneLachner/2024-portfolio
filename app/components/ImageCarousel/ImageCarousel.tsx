@@ -2,7 +2,7 @@
  * ImageCarousel Component
  *
  * This component is used within the ProjectsModal component.
- * This component displays a carousel with images based on the project's title. 
+ * This component displays a carousel with images based on the project's title.
  * It allows users to navigate through a set of images using left and right chevron buttons.
  * If no images are available for the given project, it displays a fallback message.
  */
@@ -10,11 +10,11 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import styles from './ImageCarousel.module.css';
-import { projectsImages } from '../../assets/copy/projectsModalCopy'; 
-import { ICONS } from '../../assets/icons'; 
+import { projectsImages } from '../../assets/copy/projectsModalCopy';
+import { ICONS } from '../../assets/icons';
 
 interface ImageCarouselProps {
-  projectTitle: string; 
+  projectTitle: string;
 }
 
 const ImageCarousel: React.FC<ImageCarouselProps> = ({ projectTitle }) => {
@@ -22,7 +22,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ projectTitle }) => {
   const images = projectsImages[projectTitle] || [];
 
   // Track the current image index
-  const [currentIndex, setCurrentIndex] = useState(0); 
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   // Navigate to the next image
   const goToNext = () => {
@@ -31,7 +31,9 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ projectTitle }) => {
 
   // Navigate to the previous image
   const goToPrevious = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + images.length) % images.length
+    );
   };
 
   // Return a fallback message if there are no images for the project
@@ -51,6 +53,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ projectTitle }) => {
               alt="Previous"
               width={40}
               height={40}
+              quality={90}
             />
           </button>
         )}
@@ -61,6 +64,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ projectTitle }) => {
           width={200}
           height={100}
           className={styles.carouselImage}
+          unoptimized
         />
 
         {/* Display the next button only if there are more images to navigate forward to */}
@@ -72,6 +76,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ projectTitle }) => {
               alt="Next"
               width={40}
               height={40}
+              quality={90}
             />
           </button>
         )}
