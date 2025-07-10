@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'Hyperbola';
   src: url('/fonts/Hyperbola.woff2') format('woff2'),
-       url('/fonts/Hyperbola.woff') format('woff');
+    url('/fonts/Hyperbola.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -11,7 +11,7 @@
 @font-face {
   font-family: 'Montserrat';
   src: url('/fonts/Montserrat-Regular.woff2') format('woff2'),
-       url('/fonts/Montserrat-Regular.woff') format('woff');
+    url('/fonts/Montserrat-Regular.woff') format('woff');
   font-style: normal;
   font-display: swap;
 }
@@ -79,16 +79,19 @@ a {
   margin: 0 6px;
   padding: 45px 1rem 0 1rem;
 
-  @media (min-width: 1024px) {
-    max-width: 500px;
+  @media (min-width: 768px) {
+    max-width: 800px;
+    width: 85%;
   }
 
   @media (min-width: 1024px) {
     margin-right: 4px;
+    max-width: none;
+    width: 85%;
   }
 
-  @media (min-width: 1200px) {
-    max-width: 550px;
+  @media (min-width: 1400px) {
+    max-width: 1100px;
   }
 }
 
@@ -164,5 +167,3 @@ a {
   outline: 1.9px solid rgb(8, 8, 8);
   border: none;
 }
-
-

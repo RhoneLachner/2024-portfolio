@@ -2,14 +2,15 @@
   display: block;
   justify-self: center;
   margin: 20px auto 0 auto;
-  height: 13.3rem;
-  width: 17.5rem;
-  border-radius: 50%;
+  height: 14rem;
+  width: 16rem;
+  border-radius: 10%;
   overflow: hidden;
 
   @media (min-width: 768px) {
-    height: calc(13.3rem * 1.045);
-    width: calc(17.5rem * 1.045);
+    height: calc(14rem * 1.2);
+    width: calc(16rem * 1.2);
+    margin-bottom: 40px;
   }
 }
 
@@ -37,7 +38,18 @@
   margin-bottom: 50px;
 
   @media (min-width: 530px) {
-    max-width: 426px;
+    max-width: none;
+    width: 75%;
+  }
+  @media (min-width: 768px) {
+    max-width: 600px;
+    width: 85%;
+    text-align: left;
+  }
+  @media (min-width: 1024px) {
+    max-width: 1000px;
+    width: 70%;
+    text-align: left;
   }
 }
 

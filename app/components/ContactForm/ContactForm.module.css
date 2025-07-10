@@ -5,7 +5,7 @@
   margin: 0 auto;
   padding: 2rem 1.3rem;
   background-color: rgba(165, 165, 165, 0.25);
-  border-radius: 25px;
+  border-radius: 28px;
   max-width: 360px;
   justify-self: center;
   margin-top: 5.5vh;
@@ -16,10 +16,6 @@
     margin-right: 3rem auto;
     max-width: 380px;
     margin-top: 7.5vh;
-  }
-
-  @media (min-width: 1200px) {
-    max-width: 320px;
   }
 }
 
@@ -146,7 +142,6 @@
   color: black;
   font-weight: 400;
   font-size: 12.3;
-
 }
 
 [data-theme='light'] .textArea::placeholder {

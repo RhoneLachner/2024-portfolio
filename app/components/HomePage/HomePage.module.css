@@ -171,7 +171,7 @@
   display: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1560px) {
   .hideOnSmallScreens .internalCopyContainer {
     display: block;
   }

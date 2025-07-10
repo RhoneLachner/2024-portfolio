@@ -32,11 +32,12 @@
   color: var(--text-color);
 
   @media (min-width: 475px) {
-    max-width: 290px;
+    max-width: 360px;
   }
 
   @media (min-width: 768px) {
-    max-width: 320px;
+    max-width: none;
+    width: 70%;
   }
 }
 
@@ -99,6 +100,7 @@
   @media (min-width: 768px) {
     font-size: 11.3px;
     padding-bottom: 32px;
+    text-align: left;
   }
 }
 

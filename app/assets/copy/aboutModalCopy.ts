@@ -7,7 +7,7 @@ interface AboutCopy {
 }
 
 export const aboutCopy: AboutCopy = {
-  bioImage: '/images/bio-image.webp',
+  bioImage: '/images/Headshot-Anacortes.png',
   prefix: [`Hello! `],
   bio: [
     `My name is Sarah-Rhone Lachner, and I usually go by Rhone
