@@ -59,10 +59,26 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ projectTitle }) => {
 
   return (
     <div className={styles.carousel}>
-      <div className={styles.imageContainer}>
-        {/* Display the previous button only if there are more images to navigate back to */}
+      {/* Desktop chevron - outside imageContainer at 768+ */}
+      <div className={styles.chevronOutside}>
         {currentIndex > 0 && (
           <button className={styles.chevronLeft} onClick={goToPrevious}>
+            <Image
+              className={styles.chevronLeftImage}
+              src={ICONS.chevronLeft}
+              alt="Previous"
+              width={40}
+              height={40}
+              quality={90}
+            />
+          </button>
+        )}
+      </div>
+
+      <div className={styles.imageContainer}>
+        {/* Mobile chevrons - inside imageContainer below 768px */}
+        {currentIndex > 0 && (
+          <button className={styles.chevronLeftMobile} onClick={goToPrevious}>
             <Image
               className={styles.chevronLeftImage}
               src={ICONS.chevronLeft}
@@ -84,7 +100,22 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ projectTitle }) => {
           onClick={handleImageClick}
         />
 
-        {/* Display the next button only if there are more images to navigate forward to */}
+        {currentIndex < images.length - 1 && (
+          <button className={styles.chevronRightMobile} onClick={goToNext}>
+            <Image
+              className={styles.chevronRightImage}
+              src={ICONS.chevronRight}
+              alt="Next"
+              width={40}
+              height={40}
+              quality={90}
+            />
+          </button>
+        )}
+      </div>
+
+      {/* Desktop chevron - outside imageContainer at 768+ */}
+      <div className={styles.chevronOutside}>
         {currentIndex < images.length - 1 && (
           <button className={styles.chevronRight} onClick={goToNext}>
             <Image
