@@ -12,6 +12,7 @@ import Image from 'next/image';
 import styles from './ImageCarousel.module.css';
 import { projectsImages } from '../../assets/copy/projectsModalCopy';
 import { ICONS } from '../../assets/icons';
+import ImageExpandedModal from './ImageExpandedModal';
 
 interface ImageCarouselProps {
   projectTitle: string;
@@ -24,6 +25,9 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ projectTitle }) => {
   // Track the current image index
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  // Track expanded image modal state
+  const [isExpanded, setIsExpanded] = useState(false);
+
   // Navigate to the next image
   const goToNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -34,6 +38,18 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ projectTitle }) => {
     setCurrentIndex(
       (prevIndex) => (prevIndex - 1 + images.length) % images.length
     );
+  };
+
+  // Handle image click to expand (only on screens > 756px)
+  const handleImageClick = () => {
+    if (window.innerWidth > 756) {
+      setIsExpanded(true);
+    }
+  };
+
+  // Handle closing expanded view
+  const handleCloseExpanded = () => {
+    setIsExpanded(false);
   };
 
   // Return a fallback message if there are no images for the project
@@ -61,10 +77,11 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ projectTitle }) => {
         <Image
           src={images[currentIndex]}
           alt={`Image for ${projectTitle}`}
-          width={200}
-          height={100}
+          width={456}
+          height={264}
           className={styles.carouselImage}
           quality={100}
+          onClick={handleImageClick}
         />
 
         {/* Display the next button only if there are more images to navigate forward to */}
@@ -81,6 +98,17 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ projectTitle }) => {
           </button>
         )}
       </div>
+
+      {/* Expanded Image Modal */}
+      <ImageExpandedModal
+        isOpen={isExpanded}
+        onClose={handleCloseExpanded}
+        images={images}
+        currentIndex={currentIndex}
+        onNext={goToNext}
+        onPrevious={goToPrevious}
+        projectTitle={projectTitle}
+      />
     </div>
   );
 };

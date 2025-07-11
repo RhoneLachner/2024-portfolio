@@ -28,7 +28,7 @@ const ContactForm = () => {
    */
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Check if email and message are filled before submitting
     if (!email || !message) {
       setResponseMessage('Please fill in both the email and message fields.');
@@ -65,7 +65,7 @@ const ContactForm = () => {
         {/* Input for user's email */}
         <input
           type="email"
-          placeholder="your email"
+          placeholder="your email address"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           className={styles.emailInput}

@@ -6,7 +6,7 @@
   padding: 2rem 1.3rem;
   background-color: rgba(165, 165, 165, 0.25);
   border-radius: 28px;
-  max-width: 360px;
+  max-width: 320px;
   justify-self: center;
   margin-top: 5.5vh;
 
@@ -16,6 +16,10 @@
     margin-right: 3rem auto;
     max-width: 380px;
     margin-top: 7.5vh;
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 420px;
   }
 }
 
@@ -41,7 +45,7 @@
   flex: 1;
   font-weight: 350;
   font-size: 12.5px;
-  font-family: 'Montserrat-Regular', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 
   @media (min-width: 768px) {
     padding: 0 0.5rem;
@@ -69,7 +73,7 @@
   max-height: 12rem;
   font-weight: 250;
   font-size: 12.5px;
-  font-family: 'Montserrat-Regular', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 
   @media (min-width: 768px) {
   }
@@ -96,7 +100,7 @@
   margin-right: 0.2rem;
   margin-top: 0.2rem;
   font-size: 12.5;
-  font-family: 'Montserrat-Regular', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 
   @media (min-width: 768px) {
     width: auto;

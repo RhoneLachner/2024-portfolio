@@ -11,13 +11,29 @@ interface ProjectsCopy {
 
 export const projectsCopy: ProjectsCopy[] = [
   {
+    title: 'Automated Price Scraper Desktop App for The Portland Game Store',
+    websiteCopy: '',
+    githubCopy: '',
+    githubUrl: '',
+    url: '',
+    description: `
+Hired to create a web scraping desktop app to automate item searches across 7 different gaming distribution websites. The shop owner previously spent several hours per week manually comparing hundreds of items across distributors. I created this app to automate his search processes, populate a dated spreadsheet with inventory results per distributor warehouse, and run comparison calculations.
+The app's backend logs in and scrapes 7 websites concurrently, simulates human behavior, automatically blocks ads and trackers, formats SKU and text inputs for each website format, and connects to a spreadsheet via Google Sheets API.
+
+The app's UI includes a user-friendly login page, and a home page displaying a Google Sheet URL input, user instructions, and a status menu with real-time scraping updates.
+
+The app is installed via downloadable file, and includes browser bundles to automatically include necessary Python and Playwright packages. I used a Windows emulator on my Mac to create Windows browser bundles and download files.
+
+<strong>Backend:</strong> Node.js, TypeScript, Express.js, Playwright, Socket.IO, Google Sheets API, JWT, bcryptjs, dotenv, Helmet, CORS<br/><strong>Frontend:</strong> React, TypeScript, Vite, Axios, React Router, Socket.IO Client, CSS3<br/><strong>Desktop Deployment:</strong> Electron, Python (for packaging, environment management, and cross-platform support)<br/><strong>Tools:</strong> Jest, ts-jest, ESLint, Nodemon, Git, ts-node<br/><strong>Automation:</strong> Playwright scraping, endpoint parsing, session isolation, human-like input simulation`,
+  },
+  {
     title: 'Dev Portfolio',
     websiteCopy: 'Website',
     githubCopy: 'GitHub',
     description: `
       This portfolio site was built using Next.js, TypeScript, and Tailwind CSS to showcase my work as a developer and highlight my passion for clean, responsive design. Utilizing static site generation and optimized WebP images, the site ensures fast performance and a smooth user experience.
-      I used a component-based architecture, custom hooks, and state management to create an engaging user experience, while Tailwind CSS helped streamline the design process with scalable, efficient styling. Playwright was implemented to perform end-to-end testing, ensuring the contact form and email functionality work seamlessly. 
-      I invite you to explore my projects, and the source code is available on GitHub for those interested in a closer look!
+      I used a component-based architecture, custom hooks, and state management to create an engaging user experience, while Tailwind CSS helped streamline the design process with scalable, efficient styling. Playwright was implemented to perform end-to-end testing, ensuring the contact form and email functionality work seamlessly.
+      The source code is available on GitHub for those interested in a closer look.
     `,
     url: '',
     githubUrl: 'https://github.com/RhoneLachner/2024-portfolio',
@@ -27,8 +43,8 @@ export const projectsCopy: ProjectsCopy[] = [
     websiteCopy: 'Website',
     githubCopy: 'GitHub',
     description: `
-CommitWizard CLI is a command-line tool that helps developers write consistent and structured Git commit messages by interactively selecting a commit category before writing the message. This ensures best practices are followed and makes it easier to maintain a clean and organized commit history. 
-Features include interactive commit prompts, structured commit messages, and customizable categories. 
+CommitWizard CLI is a command-line tool that helps developers write consistent and structured Git commit messages by interactively selecting a commit category before writing the message. This ensures best practices are followed and makes it easier to maintain a clean and organized commit history.
+Features include interactive commit prompts, structured commit messages, and customizable categories.
 CommitWizard CLI has been published on npm and can be installed globally with the following command:
 npm install -g commitwizard-cli
 Contributions are welcome! Feel free to open an issue or submit a pull request on GitHub.
@@ -36,22 +52,22 @@ Contributions are welcome! Feel free to open an issue or submit a pull request o
     url: 'https://www.npmjs.com/package/commitwizard-cli',
     githubUrl: 'https://github.com/RhoneLachner/CommitWizard-CLI',
   },
-  {
-    title: 'Work in Progress: Contingency Compass App',
-    websiteCopy: 'Website',
-    githubCopy: 'GitHub',
-    description: `
-      A full-stack web application designed to provide critical information and resources during natural disasters. It features real-time updates, location-based data, and resource mapping.  The frontend is built with React, HTML, CSS, and JavaScript, while the backend utilizes Django and Django REST Framework. APIs include FEMA, OpenWeatherMap, and Google Maps to ensure reliable, up-to-date data.
-    `,
-    url: '',
-    githubUrl: 'https://github.com/RhoneLachner/contingency-compass-app',
-  },
+  // {
+  //   title: 'Work in Progress: Contingency Compass App',
+  //   websiteCopy: 'Website',
+  //   githubCopy: 'GitHub',
+  //   description: `
+  //     A full-stack web application designed to provide critical information and resources during natural disasters. It features real-time updates, location-based data, and resource mapping.  The frontend is built with React, HTML, CSS, and JavaScript, while the backend utilizes Django and Django REST Framework. APIs include FEMA, OpenWeatherMap, and Google Maps to ensure reliable, up-to-date data.
+  //   `,
+  //   url: '',
+  //   githubUrl: 'https://github.com/RhoneLachner/contingency-compass-app',
+  // },
   {
     title: 'beHuman VS Code Extension',
     websiteCopy: 'Website',
     githubCopy: 'GitHub',
     description: `
-      A VS Code extension developed in 7 days that encourages developers to take breaks with customizable intervals. 
+      A VS Code extension developed in 7 days that encourages developers to take breaks with customizable intervals.
       Built with Node.js, JavaScript, HTML, CSS, PostgreSQL, and deployed via Heroku and Netlify. The extension promotes healthy screen-time habits by alerting users when it's time for a break.
     `,
     url: 'https://marketplace.visualstudio.com/items?itemName=not-bot.be-human',
@@ -70,6 +86,12 @@ Contributions are welcome! Feel free to open an issue or submit a pull request o
 ];
 
 export const projectsImages: { [key: string]: string[] } = {
+  'Automated Price Scraper Desktop App for The Portland Game Store': [
+    '/images/projectImages/PGS-image1.png',
+    '/images/projectImages/PGS-image2.png',
+    '/images/projectImages/PGS-image3.png',
+    '/images/projectImages/PGS-image4.png',
+  ],
   'Dev Portfolio': [
     '/images/projectImages/portfolio-image1.webp',
     '/images/projectImages/portfolio-image2.webp',

@@ -5,12 +5,14 @@
  * - DynamicCloseButton for dismissing the modal.
  * - DynamicSocialIcons for displaying links to social media sites.
  * - ContactForm to allow users to send a message via email.
+ * - Buy me a tea button linking to Buy Me a Coffee page.
  */
 
 import React from 'react';
 import ContactForm from '../ContactForm/ContactForm';
 import DynamicCloseButton from '../DynamicIcons/DynamicCloseButton';
 import DynamicSocialIcons from '../DynamicIcons/DynamicSocialIcons';
+import styles from './ContactModal.module.css';
 
 interface ContactModalProps {
   isOpen: boolean;
@@ -25,7 +27,16 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
     <div className="modalOverlay">
       <div className="modalContent">
         <DynamicCloseButton onClose={onClose} />
-        <DynamicSocialIcons /> <ContactForm />
+        <DynamicSocialIcons />
+        <ContactForm />
+        <a
+          href="https://buymeacoffee.com/rhone"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.buyMeTeaButton}
+        >
+          🫖 buy me a tea
+        </a>
       </div>
     </div>
   );

@@ -58,7 +58,7 @@ a {
   padding: 0 0 0 0;
   justify-content: center;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     justify-content: flex-end;
   }
 }
@@ -80,14 +80,14 @@ a {
   padding: 45px 1rem 0 1rem;
 
   @media (min-width: 768px) {
-    max-width: 800px;
-    width: 85%;
+    max-width: 700px;
+    width: 80%;
   }
 
   @media (min-width: 1024px) {
     margin-right: 4px;
-    max-width: none;
-    width: 85%;
+    max-width: 900px;
+    width: 75%;
   }
 
   @media (min-width: 1400px) {
@@ -107,8 +107,8 @@ a {
 }
 
 .closeButton img {
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
 }
 
 .socialIconsContainer {
@@ -139,7 +139,7 @@ a {
 }
 
 .socialIconImage:hover {
-  border: 1px solid white;
+  outline: 1.9px solid white;
   border-radius: 50%;
 }
 

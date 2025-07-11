@@ -28,6 +28,10 @@ const ProjectsModal: React.FC<ProjectsModalProps> = ({ isOpen, onClose }) => {
       <div className="modalContent">
         <DynamicCloseButton onClose={onClose} />
 
+        <div className={styles.expandInstruction}>
+          click on images to expand them
+        </div>
+
         <div className={styles.carouselStack}>
           {/* Loop through the projects and render each project's details */}
           {projectsCopy.map((project, index) => (
@@ -37,8 +41,9 @@ const ProjectsModal: React.FC<ProjectsModalProps> = ({ isOpen, onClose }) => {
               <div className={styles.carouselTextContainer}>
                 {/* conditionally apply noHoverProjectTitles classname */}
                 {project.title === 'Dev Portfolio' ||
+                project.title === 'Work in Progress: Contingency Compass App' ||
                 project.title ===
-                  'Work in Progress: Contingency Compass App' ? (
+                  'Automated Price Scraper Desktop App for The Portland Game Store' ? (
                   <div className={`${styles.noHoverProjectTitles}`}>
                     {project.title ===
                     'Work in Progress: Contingency Compass App' ? (
@@ -64,7 +69,9 @@ const ProjectsModal: React.FC<ProjectsModalProps> = ({ isOpen, onClose }) => {
                 {project.url &&
                   project.title !== 'Dev Portfolio' &&
                   project.title !==
-                    'Work in Progress: Contingency Compass App' && (
+                    'Work in Progress: Contingency Compass App' &&
+                  project.title !==
+                    'Automated Price Scraper Desktop App for The Portland Game Store' && (
                     <span>
                       <a
                         className={styles.carouselLink}
@@ -88,9 +95,11 @@ const ProjectsModal: React.FC<ProjectsModalProps> = ({ isOpen, onClose }) => {
                 </a>
                 <div className={styles.carouselDescription}>
                   {project.description.split('\n').map((paragraph, index) => (
-                    <p className={styles.carouselParagraph} key={index}>
-                      {paragraph}
-                    </p>
+                    <p
+                      className={styles.carouselParagraph}
+                      key={index}
+                      dangerouslySetInnerHTML={{ __html: paragraph }}
+                    />
                   ))}
                 </div>
               </div>

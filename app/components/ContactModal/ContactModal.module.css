@@ -1,0 +1,39 @@
+.buyMeTeaButton {
+  display: inline-block;
+  background-color: rgba(165, 165, 165, 0.25);
+  color: #ffffffde;
+  padding: 8px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: 'Montserrat-Regular', sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  letter-spacing: 1.1px;
+  margin-top: 5.5vh;
+  margin-bottom: 2rem;
+  border: none;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+}
+
+.buyMeTeaButton:hover {
+  background-color: rgba(241, 241, 241, 0.9);
+  font-weight: 500;
+  color: rgb(1, 1, 1);
+}
+
+/* Light mode */
+[data-theme='light'] .buyMeTeaButton {
+    background-color: #9b9b9b61;
+    color: rgb(1, 1, 1);
+  /* border: rgb(175, 175, 175) solid 1px; */
+  font-weight: 550;
+}
+
+[data-theme='light'] .buyMeTeaButton:hover {
+  background-color: rgba(8, 8, 8, 0.886);
+  /* outline: 1.5px solid rgb(8, 8, 8); */
+  /* border: none; */
+  color: rgba(255, 255, 255, 0.806);
+}

@@ -28,9 +28,10 @@ const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
             className={styles.bioImage}
             src={aboutCopy.bioImage}
             alt="Bio Image"
-            width={320}
-            height={320}
+            width={280}
+            height={280}
             priority
+            quality={95}
           />
         </div>
 
