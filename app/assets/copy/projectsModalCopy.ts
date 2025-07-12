@@ -18,7 +18,7 @@ export const projectsCopy: ProjectsCopy[] = [
     url: '',
     description: `
 Hired to create a web scraping desktop app to automate item searches across 7 different gaming distribution websites. The shop owner previously spent several hours per week manually comparing hundreds of items across distributors. I created this app to automate his search processes, populate a dated spreadsheet with inventory results per distributor warehouse, and run comparison calculations.
-The app's backend logs in and scrapes 7 websites concurrently, simulates human behavior, automatically blocks ads and trackers, formats SKU and text inputs for each website format, and connects to a spreadsheet via Google Sheets API.
+The app's backend logs in and scrapes 7 websites concurrently, simulates human behavior, automatically blocks ads and trackers, formats SKU and text inputs for each website format, and connects to a spreadsheet via Google Sheets API. Whenever possible, I used UPCs rather than SKUs, and accessed API endpoints directly to improve the stability and performance of the scraping functionality. Each scraper includes two different fallback methods to cover potential edge cases, missing product information, and user input error.
 
 The app's UI includes a user-friendly login page, and a home page displaying a Google Sheet URL input, user instructions, and a status menu with real-time scraping updates.
 
@@ -81,7 +81,7 @@ Contributions are welcome! Feel free to open an issue or submit a pull request o
       This Tarot reading app allows users to draw one or three cards from the Major Arcana for a personalized reading. Built with Vanilla JavaScript, HTML, and CSS, the app stores past readings in the browser using local storage, and data for each card was translated from my favorite old book on Tarot interpretation.
     `,
     url: 'https://www.arcanadivinator.online/',
-    githubUrl: 'https://github.com/Mystechal-Divinators',
+    githubUrl: 'https://github.com/RhoneLachner/major_arcana_divinator_app',
   },
 ];
 
