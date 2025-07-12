@@ -120,6 +120,6 @@ export const projectsImages: { [key: string]: string[] } = {
     '/images/projectImages/tarot-image1.png',
     '/images/projectImages/tarot-image2.png',
     '/images/projectImages/tarot-image3.png',
-    '/images/projectImages/tarot-image3.png',
+    '/images/projectImages/tarot-image4.png',
   ],
 };
