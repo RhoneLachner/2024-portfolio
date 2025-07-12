@@ -80,7 +80,7 @@ Contributions are welcome! Feel free to open an issue or submit a pull request o
     description: `
       This Tarot reading app allows users to draw one or three cards from the Major Arcana for a personalized reading. Built with Vanilla JavaScript, HTML, and CSS, the app stores past readings in the browser using local storage, and data for each card was translated from my favorite old book on Tarot interpretation.
     `,
-    url: 'https://mystechal-divinators.github.io/project-week-tarot-divinators/index.html',
+    url: 'https://www.arcanadivinator.online/',
     githubUrl: 'https://github.com/Mystechal-Divinators',
   },
 ];
