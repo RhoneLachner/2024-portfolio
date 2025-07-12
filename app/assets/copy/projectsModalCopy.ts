@@ -117,8 +117,9 @@ export const projectsImages: { [key: string]: string[] } = {
     '/images/projectImages/behuman-image3.webp',
   ],
   'Major Arcana Divinator App': [
-    '/images/projectImages/tarot-image1.webp',
-    '/images/projectImages/tarot-image2.webp',
-    '/images/projectImages/tarot-image3.webp',
+    '/images/projectImages/tarot-image1.png',
+    '/images/projectImages/tarot-image2.png',
+    '/images/projectImages/tarot-image3.png',
+    '/images/projectImages/tarot-image3.png',
   ],
 };
