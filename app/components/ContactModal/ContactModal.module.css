@@ -9,12 +9,20 @@
   font-size: 13px;
   font-weight: 300;
   letter-spacing: 1.1px;
-  margin-top: 5.5vh;
+  margin-top: 5.9vh;
   margin-bottom: 2rem;
   border: none;
   transition: opacity 0.3s ease;
   cursor: pointer;
   text-align: center;
+
+   @media (min-width: 768px) {
+      margin-top: 5vh;
+   }
+
+   @media (min-width: 1024px) {
+          margin-top: 5.2vh;
+   }
 }
 
 .buyMeTeaButton:hover {

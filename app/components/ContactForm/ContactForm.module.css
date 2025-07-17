@@ -6,20 +6,25 @@
   padding: 2rem 1.3rem;
   background-color: rgba(165, 165, 165, 0.25);
   border-radius: 28px;
-  max-width: 320px;
+  width: 85%;
+  max-width: 360px;
   justify-self: center;
-  margin-top: 5.5vh;
+  margin-top: 4vh;
 
   @media (min-width: 768px) {
+    margin-top: 5.5vh;
     padding: 2rem 1.4rem;
     margin-left: 3rem auto;
     margin-right: 3rem auto;
-    max-width: 380px;
+    width: 80%;
+    max-width: 415px;
     margin-top: 7.5vh;
   }
 
   @media (min-width: 1024px) {
-    max-width: 420px;
+    width: 80%;
+    max-width: 450px;
+    padding: 2.1rem 1.5rem;
   }
 }
 
