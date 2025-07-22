@@ -1,47 +1,99 @@
-# Sarah Rhone Lachner - Developer Portfolio
+# 2024 Developer Portfolio
 
-Welcome to my developer portfolio! This site was built with **Next.js**, **TypeScript**, and **Tailwind CSS** to showcase my development work and passion for clean, responsive design. It leverages **static site generation** and **optimized WebP images** to ensure fast load times and a smooth user experience.
+A modern, responsive portfolio website built with Next.js 15, TypeScript, and Tailwind CSS, featuring an interactive particle animation background and dark/light mode toggle.
 
-The architecture is **component-based**, with custom hooks and state management to keep the interface efficient and interactive. Tailwind CSS provided a streamlined approach to styling, making it easy to maintain consistency and scalability across the design. I also implemented **Playwright** for end-to-end testing to ensure the contact form and email functionality work reliably.
+## Features
 
-Feel free to reach out through **LinkedIn**, **GitHub**, my band’s website, or send me a message directly via the **contact form** on this Portfolio site. I’d love to connect!
+- **Interactive Particle Animation**: Custom Canvas API implementation with mouse interaction
+- **Dark/Light Mode Toggle**: Persistent theme switching with system preference detection
+- **Responsive Design**: Mobile-first approach with optimized layouts for all screen sizes
+- **Contact Form**: Functional email form with Nodemailer integration
+- **Project Showcase**: Interactive image carousels with modal views
+- **Optimized Performance**: Next.js 15 with static site generation (SSG)
+- **Modern Stack**: TypeScript, CSS Modules, and WebP image optimization
 
----
+## Tech Stack
 
-## **Table of Contents**
-1. [Demo](#demo)
-2. [Features](#features)
-3. [Technologies](#technologies)
-4. [License](#license)
+- **Framework**: Next.js 15 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS + CSS Modules
+- **Animation**: Custom Canvas API particle system
+- **Email**: Nodemailer
+- **Testing**: Jest + React Testing Library + Playwright
+- **Deployment**: Optimized for static hosting
 
----
+## Testing
 
-## **Demo**
-Check out the live demo of the portfolio at:
-- [rhonelachner.com](https://rhonelachner.com)
-- [sarahrhonelachner.dev](https://sarahrhonelachner.dev)
+This project includes comprehensive testing with both unit tests and end-to-end tests:
 
----
+### Unit Tests (Jest + React Testing Library)
 
-## **Features**
-- **Particle Animation Background:** Custom background animation that responds to user interactions.
-- **Dark Mode Toggle:** Switch between light and dark themes.
-- **Dynamic Modals:** Each section of the portfolio is loaded via modals (About, Projects, Contact).
-- **Fully Responsive Design:** Optimized for different screen sizes and devices.
-- **Email Functionality:** Contact form allowing visitors to send messages directly via the integrated email API.
+```bash
+# Run all unit tests
+npm test
 
----
+# Run tests in watch mode
+npm run test:watch
 
-## **Technologies**
-- **Framework:** Next.js
-- **Language:** TypeScript
-- **Styling:** Tailwind CSS, CSS Modules
-- **Animations:** Custom Particle Animation with JavaScript and CSS
-- **Testing:** Playwright for End-to-End testing
-- **Deployment:** Vercel
+# Run tests with coverage report
+npm run test:coverage
+```
 
----
+**Test Coverage:**
 
-## **License**
-This project is open source and available under the [MIT License](LICENSE).
+- ContactForm component (form validation, API integration, error handling)
+- ModalContext (state management, modal switching)
+- useDarkMode hook (theme toggling, localStorage persistence, system preference detection)
 
+### End-to-End Tests (Playwright)
+
+```bash
+# Run e2e tests
+npm run test:e2e
+
+# Run e2e tests with UI
+npm run test:e2e:ui
+```
+
+## Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
+```
+
+## Project Structure
+
+```
+app/
+├── components/          # React components
+├── context/            # React context providers
+├── hooks/              # Custom React hooks
+├── assets/             # Static assets and data
+└── globals.css         # Global styles
+
+__tests__/              # Unit tests
+playwright/             # E2E tests
+public/                 # Static files
+```
+
+## Key Components
+
+- **ParticleBackground**: Interactive Canvas-based animation system
+- **ContactForm**: Email functionality with validation
+- **ModalContext**: Global state management for modals
+- **useDarkMode**: Theme management hook
+- **ImageCarousel**: Project showcase with navigation
+
+## License
+
+MIT License - see LICENSE file for details.
