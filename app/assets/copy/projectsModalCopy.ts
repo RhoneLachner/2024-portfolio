@@ -11,22 +11,6 @@ interface ProjectsCopy {
 
 export const projectsCopy: ProjectsCopy[] = [
   {
-    title: 'Boilerplate Wizard',
-    websiteCopy: 'Website',
-    githubCopy: 'GitHub',
-    githubUrl: 'https://github.com/RhoneLachner/boilerplate-wizard-monorepo',
-    url: 'https://www.npmjs.com/~rhonezone',
-    description: `
-A collection of batteries‑included boilerplate generators for modern web apps published on npm. This project was created as a modern alternative to create-react-app to help developers scaffold production‑ready React and Next.js projects in seconds with strong defaults, a clean architectural foundation, and minimal configuration.
-
-Each boilerplate UI contains an about page with user startup instructions and development commands. Wizard Note comments are embedded throughout the codebase to guide users on which files can be safely customized or removed.
-
-Built using Node.js with native ES modules, Boilerplate Wizard powers multiple bp-wizard-create-* CLI tools, each designed to spin up a new project with sensible defaults, testing, linting, and modern structure. It integrates popular frontend frameworks like React 18 and Next.js 14 (App Router), and includes Vite for fast builds and modern development features. Code quality is enforced through ESLint and Prettier, and testing is fully configured with Vitest, Jest, and Playwright for unit, integration, and end-to-end coverage.
-
-The project uses npm and pnpm workspaces for package management, and includes CI/CD support via GitHub Actions and Dependabot for automated updates and security. By emphasizing up-to-date dependencies and security-first practices, Boilerplate Wizard provides a robust starting point for professional-grade applications, personal projects, and hackathons.
-<strong>Available Commands for npm Package Download:</strong></br><strong>React + JavaScript: </strong>npx bp-wizard-create-react-js my-app</br><strong>React + TypeScript: </strong>npx bp-wizard-create-react-ts my-app</br><strong>Next.js + JavaScript: </strong>npx bp-wizard-create-next-js my-app</br><strong>Next.js + TypeScript: </strong>npx bp-wizard-create-next-ts my-app</br>`,
-  },
-  {
     title: 'Automated Price Scraper Desktop App for The Portland Game Store',
     websiteCopy: '',
     githubCopy: '',
@@ -41,6 +25,22 @@ The app's UI includes a user-friendly login page, and a home page displaying a G
 The app is installed via downloadable file, and includes browser bundles to automatically include necessary Python and Playwright packages. I used a Windows emulator on my Mac to create Windows browser bundles and download files.
 
 <strong>Backend:</strong> Node.js, TypeScript, Express.js, Playwright, Socket.IO, Google Sheets API, JWT, bcryptjs, dotenv, Helmet, CORS<br/><strong>Frontend:</strong> React, TypeScript, Vite, Axios, React Router, Socket.IO Client, CSS3<br/><strong>Desktop Deployment:</strong> Electron, Python (for packaging, environment management, and cross-platform support)<br/><strong>Tools:</strong> Jest, ts-jest, ESLint, Nodemon, Git, ts-node<br/><strong>Automation:</strong> Playwright scraping, endpoint parsing, session isolation, human-like input simulation`,
+  },
+  {
+    title: 'Boilerplate Wizard',
+    websiteCopy: 'Website',
+    githubCopy: 'GitHub',
+    githubUrl: 'https://github.com/RhoneLachner/boilerplate-wizard-monorepo',
+    url: 'https://www.npmjs.com/~rhonezone',
+    description: `
+A collection of batteries‑included boilerplate generators for modern web apps published on npm. This project was created as a modern alternative to create-react-app to help developers scaffold production‑ready React and Next.js projects in seconds with strong defaults, a clean architectural foundation, and minimal configuration.
+
+Each boilerplate UI contains an about page with user startup instructions and development commands. Wizard Note comments are embedded throughout the codebase to guide users on which files can be safely customized or removed.
+
+Built using Node.js with native ES modules, Boilerplate Wizard powers multiple bp-wizard-create-* CLI tools, each designed to spin up a new project with sensible defaults, testing, linting, and modern structure. It integrates popular frontend frameworks like React 18 and Next.js 14 (App Router), and includes Vite for fast builds and modern development features. Code quality is enforced through ESLint and Prettier, and testing is fully configured with Vitest, Jest, and Playwright for unit, integration, and end-to-end coverage.
+
+The project uses npm and pnpm workspaces for package management, and includes CI/CD support via GitHub Actions and Dependabot for automated updates and security. By emphasizing up-to-date dependencies and security-first practices, Boilerplate Wizard provides a robust starting point for professional-grade applications, personal projects, and hackathons.
+<strong>Available Commands for npm Package Download:</strong></br><strong>React + JavaScript: </strong>npx bp-wizard-create-react-js my-app</br><strong>React + TypeScript: </strong>npx bp-wizard-create-react-ts my-app</br><strong>Next.js + JavaScript: </strong>npx bp-wizard-create-next-js my-app</br><strong>Next.js + TypeScript: </strong>npx bp-wizard-create-next-ts my-app</br>`,
   },
   {
     title: 'Dev Portfolio',
@@ -68,16 +68,6 @@ Contributions are welcome! Feel free to open an issue or submit a pull request o
     url: 'https://www.npmjs.com/package/commitwizard-cli',
     githubUrl: 'https://github.com/RhoneLachner/CommitWizard-CLI',
   },
-  // {
-  //   title: 'Work in Progress: Contingency Compass App',
-  //   websiteCopy: 'Website',
-  //   githubCopy: 'GitHub',
-  //   description: `
-  //     A full-stack web application designed to provide critical information and resources during natural disasters. It features real-time updates, location-based data, and resource mapping.  The frontend is built with React, HTML, CSS, and JavaScript, while the backend utilizes Django and Django REST Framework. APIs include FEMA, OpenWeatherMap, and Google Maps to ensure reliable, up-to-date data.
-  //   `,
-  //   url: '',
-  //   githubUrl: 'https://github.com/RhoneLachner/contingency-compass-app',
-  // },
   {
     title: 'beHuman VS Code Extension',
     websiteCopy: 'Website',
@@ -102,6 +92,12 @@ Contributions are welcome! Feel free to open an issue or submit a pull request o
 ];
 
 export const projectsImages: { [key: string]: string[] } = {
+  'Automated Price Scraper Desktop App for The Portland Game Store': [
+    '/images/projectImages/PGS-image1.png',
+    '/images/projectImages/PGS-image2.png',
+    '/images/projectImages/PGS-image3.png',
+    '/images/projectImages/PGS-image4.png',
+  ],
   'Boilerplate Wizard': [
     '/images/projectImages/bp-wizard.png',
     '/images/projectImages/bp-wizard1.png',
@@ -114,12 +110,6 @@ export const projectsImages: { [key: string]: string[] } = {
     '/images/projectImages/bp-wizard8.png',
     '/images/projectImages/bp-wizard9.png',
     '/images/projectImages/bp-wizard10.png',
-  ],
-  'Automated Price Scraper Desktop App for The Portland Game Store': [
-    '/images/projectImages/PGS-image1.png',
-    '/images/projectImages/PGS-image2.png',
-    '/images/projectImages/PGS-image3.png',
-    '/images/projectImages/PGS-image4.png',
   ],
   'Dev Portfolio': [
     '/images/projectImages/portfolio-image1.webp',
