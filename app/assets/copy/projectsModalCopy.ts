@@ -97,6 +97,7 @@ export const projectsImages: { [key: string]: string[] } = {
     '/images/projectImages/PGS-image2.png',
     '/images/projectImages/PGS-image3.png',
     '/images/projectImages/PGS-image4.png',
+    '/images/projectImages/PGS-image5.png',
   ],
   'Boilerplate Wizard': [
     '/images/projectImages/bp-wizard.png',
